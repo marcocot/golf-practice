@@ -1,0 +1,57 @@
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: golf
+      POSTGRES_PASSWORD: golf
+      POSTGRES_DB: golf
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U golf']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  mailpit:
+    image: axllent/mailpit:latest
+    restart: unless-stopped
+    ports:
+      - '8025:8025'
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgresql://golf:golf@db:5432/golf?schema=public
+      # Replace with a real secret and SMTP provider in a real deployment.
+      BETTER_AUTH_SECRET: change-me-in-production-please
+      BETTER_AUTH_URL: http://localhost:3000
+      MAIL_HOST: mailpit
+      MAIL_PORT: 1025
+      WEB_ORIGIN: http://localhost:8080
+    ports:
+      - '3000:3000'
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        VITE_API_URL: http://localhost:3000/api
+        VITE_AUTH_URL: http://localhost:3000
+    restart: unless-stopped
+    ports:
+      - '8080:80'
+    depends_on:
+      - api
+
+volumes:
+  db-data:
