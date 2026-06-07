@@ -53,7 +53,7 @@ Docker and run the apps with pnpm.
 
 ```sh
 pnpm install
-just up                              # Postgres + Mailpit
+just infra                           # Postgres + Mailpit only
 just migrate                         # create/apply migrations
 just dev-local                       # api + web on the host
 ```

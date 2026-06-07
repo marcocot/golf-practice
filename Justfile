@@ -8,28 +8,32 @@ default:
 install:
     pnpm install
 
-# Start the dev infra (Postgres + Mailpit)
+# Start the whole stack in Docker (db, mailpit, api, web), detached
 up:
-    docker compose up -d db mailpit
+    docker compose up -d --build
 
-# Stop the dev infra
+# Stop and remove the stack
 down:
     docker compose down
 
-# Run the full dev stack in Docker (db, mailpit, api, web) with hot reload
+# Start only the infra (Postgres + Mailpit), detached
+infra:
+    docker compose up -d db mailpit
+
+# Run the whole stack in Docker in the foreground with logs and hot reload
 dev:
     docker compose up --build
 
-# Follow logs of the dev stack
+# Follow the stack logs
 logs:
     docker compose logs -f
 
-# Run the dev stack hybrid: infra in Docker, api + web on the host
-dev-local: up
+# Run hybrid: infra in Docker, api + web on the host
+dev-local: infra
     pnpm --parallel --filter "./apps/*" dev
 
 # Run only the API on the host in watch mode
-dev-api: up
+dev-api: infra
     pnpm --filter @golf/api dev
 
 # Run only the web app on the host
@@ -37,11 +41,11 @@ dev-web:
     pnpm --filter @golf/web dev
 
 # Create/apply a dev migration (prompts for a name)
-migrate name="dev": up
+migrate name="dev": infra
     pnpm --filter @golf/api exec prisma migrate dev --name {{name}}
 
 # Apply pending migrations without generating new ones
-migrate-deploy: up
+migrate-deploy: infra
     pnpm --filter @golf/api exec prisma migrate deploy
 
 # Regenerate the Prisma client
@@ -49,7 +53,7 @@ generate:
     pnpm --filter @golf/api exec prisma generate
 
 # Open Prisma Studio against the dev database
-studio: up
+studio: infra
     pnpm --filter @golf/api exec prisma studio
 
 # Run every test suite (api unit + web)
@@ -61,7 +65,7 @@ test-api:
     pnpm --filter @golf/api test
 
 # API end-to-end tests (needs the database)
-e2e: up
+e2e: infra
     pnpm --filter @golf/api test:e2e
 
 # Web tests with coverage
