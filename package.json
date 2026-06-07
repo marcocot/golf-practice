@@ -17,5 +17,16 @@
     "eslint": "^9.34.0",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@nestjs/core",
+      "@prisma/client",
+      "@prisma/engines",
+      "@swc/core",
+      "esbuild",
+      "prisma",
+      "unrs-resolver"
+    ]
   }
 }

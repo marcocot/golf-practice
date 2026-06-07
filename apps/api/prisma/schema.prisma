@@ -1,0 +1,145 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// --- BetterAuth managed models (email/password + bearer plugin) ---
+
+model User {
+  id            String   @id @db.Uuid
+  name          String
+  email         String   @unique
+  emailVerified Boolean  @default(false)
+  image         String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  sessions Session[]
+  accounts Account[]
+
+  clubs          Club[]
+  trainingSessions TrainingSession[]
+  shotBlocks     ShotBlock[]
+
+  @@map("user")
+}
+
+model Session {
+  id        String   @id @db.Uuid
+  expiresAt DateTime
+  token     String   @unique
+  ipAddress String?
+  userAgent String?
+  userId    String   @db.Uuid
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("session")
+}
+
+model Account {
+  id                    String    @id @db.Uuid
+  accountId             String
+  providerId            String
+  userId                String    @db.Uuid
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  @@map("account")
+}
+
+model Verification {
+  id         String   @id @db.Uuid
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("verification")
+}
+
+// --- Domain models ---
+// Syncable models carry updatedAt (logical version for last-write-wins) and
+// deletedAt (soft delete) so the client and server reconcile per record.
+
+enum ClubType {
+  DRIVER
+  HYBRID_4
+  HYBRID_5
+  IRON_5
+  IRON_6
+  IRON_7
+  IRON_8
+  IRON_9
+  PW
+  WEDGE_50
+  WEDGE_56
+  LOB
+}
+
+model Club {
+  id        String    @id @default(uuid()) @db.Uuid
+  userId    String    @db.Uuid
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      ClubType
+  label     String
+  position  Int
+  createdAt DateTime  @default(now())
+  updatedAt DateTime
+  deletedAt DateTime?
+
+  shotBlocks ShotBlock[]
+
+  @@index([userId, updatedAt])
+}
+
+model TrainingSession {
+  id        String    @id @default(uuid()) @db.Uuid
+  userId    String    @db.Uuid
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  startedAt DateTime
+  note      String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime
+  deletedAt DateTime?
+
+  shotBlocks ShotBlock[]
+
+  @@index([userId, updatedAt])
+}
+
+model ShotBlock {
+  id             String          @id @default(uuid()) @db.Uuid
+  userId         String          @db.Uuid
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessionId      String          @db.Uuid
+  session        TrainingSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  clubId         String          @db.Uuid
+  club           Club            @relation(fields: [clubId], references: [id], onDelete: Cascade)
+  ballCount      Int
+  solidCount     Int
+  leftCount      Int
+  centerCount    Int
+  rightCount     Int
+  distanceMeters Int?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime
+  deletedAt      DateTime?
+
+  @@index([userId, updatedAt])
+  @@index([sessionId])
+}

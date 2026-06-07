@@ -1,0 +1,15 @@
+{
+  "moduleFileExtensions": ["js", "mjs", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "setupFiles": ["<rootDir>/setup-e2e.ts"],
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.ts$": "ts-jest",
+    "^.+\\.(mjs|cjs|js)$": ["@swc/jest", { "module": { "type": "commonjs" }, "jsc": { "target": "es2022" } }]
+  },
+  "transformIgnorePatterns": [],
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/../src/$1"
+  }
+}
