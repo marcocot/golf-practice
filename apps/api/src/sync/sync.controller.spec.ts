@@ -29,7 +29,12 @@ describe('SyncController', () => {
   });
 
   it('pushes the payload for the session user', async () => {
-    const payload: PushPayloadDto = { clubs: [], trainingSessions: [], shotBlocks: [] };
+    const payload: PushPayloadDto = {
+      clubs: [],
+      trainingSessions: [],
+      shotBlocks: [],
+      skillTestResults: [],
+    };
     push.mockResolvedValueOnce({ serverTime: 't' });
 
     await controller.push(session, payload);

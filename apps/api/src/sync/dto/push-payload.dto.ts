@@ -80,6 +80,19 @@ export class ShotBlockInputDto extends SyncableDto {
   distanceMeters?: number | null;
 }
 
+export class SkillTestResultInputDto extends SyncableDto {
+  @IsString()
+  testKey!: string;
+
+  @IsInt()
+  @Min(0)
+  @Max(100)
+  score!: number;
+
+  @IsDateString()
+  takenAt!: string;
+}
+
 export class PushPayloadDto {
   @IsArray()
   @ValidateNested({ each: true })
@@ -95,4 +108,9 @@ export class PushPayloadDto {
   @ValidateNested({ each: true })
   @Type(() => ShotBlockInputDto)
   shotBlocks: ShotBlockInputDto[] = [];
+
+  @IsArray()
+  @ValidateNested({ each: true })
+  @Type(() => SkillTestResultInputDto)
+  skillTestResults: SkillTestResultInputDto[] = [];
 }

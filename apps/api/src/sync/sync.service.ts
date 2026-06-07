@@ -1,10 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { Club, Prisma, ShotBlock, TrainingSession } from '@prisma/client';
+import { Club, Prisma, ShotBlock, SkillTestResult, TrainingSession } from '@prisma/client';
 import { PrismaService } from '@/prisma/prisma.service';
 import {
   ClubInputDto,
   PushPayloadDto,
   ShotBlockInputDto,
+  SkillTestResultInputDto,
   TrainingSessionInputDto,
 } from '@/sync/dto/push-payload.dto';
 
@@ -13,6 +14,7 @@ export interface SyncSnapshot {
   clubs: Club[];
   trainingSessions: TrainingSession[];
   shotBlocks: ShotBlock[];
+  skillTestResults: SkillTestResult[];
 }
 
 interface Versioned {
@@ -29,29 +31,43 @@ export class SyncService {
     const serverTime = new Date();
     const where = { userId, updatedAt: { gt: cursor } };
 
-    const [clubs, trainingSessions, shotBlocks] = await this.prisma.$transaction([
+    const [clubs, trainingSessions, shotBlocks, skillTestResults] = await this.prisma.$transaction([
       this.prisma.club.findMany({ where }),
       this.prisma.trainingSession.findMany({ where }),
       this.prisma.shotBlock.findMany({ where }),
+      this.prisma.skillTestResult.findMany({ where }),
     ]);
 
-    return { serverTime: serverTime.toISOString(), clubs, trainingSessions, shotBlocks };
+    return {
+      serverTime: serverTime.toISOString(),
+      clubs,
+      trainingSessions,
+      shotBlocks,
+      skillTestResults,
+    };
   }
 
   async push(userId: string, payload: PushPayloadDto): Promise<{ serverTime: string }> {
     await this.prisma.$transaction(async (tx) => {
-      for (const club of payload.clubs) {
+      for (const club of payload.clubs ?? []) {
         await this.applyClub(tx, userId, club);
       }
-      for (const session of payload.trainingSessions) {
+      for (const session of payload.trainingSessions ?? []) {
         await this.applyTrainingSession(tx, userId, session);
       }
-      for (const block of payload.shotBlocks) {
+      for (const block of payload.shotBlocks ?? []) {
         await this.applyShotBlock(tx, userId, block);
+      }
+      for (const result of payload.skillTestResults ?? []) {
+        await this.applySkillTestResult(tx, userId, result);
       }
     });
 
     return { serverTime: new Date().toISOString() };
+  }
+
+  private optionalDate(value?: string | null): Date | null {
+    return value ? new Date(value) : null;
   }
 
   private wins(existing: Versioned | null, userId: string, incomingUpdatedAt: string): boolean {
@@ -78,7 +94,7 @@ export class SyncService {
       label: input.label,
       position: input.position,
       updatedAt: new Date(input.updatedAt),
-      deletedAt: input.deletedAt ? new Date(input.deletedAt) : null,
+      deletedAt: this.optionalDate(input.deletedAt),
     };
     await tx.club.upsert({
       where: { id: input.id },
@@ -100,7 +116,7 @@ export class SyncService {
       startedAt: new Date(input.startedAt),
       note: input.note ?? null,
       updatedAt: new Date(input.updatedAt),
-      deletedAt: input.deletedAt ? new Date(input.deletedAt) : null,
+      deletedAt: this.optionalDate(input.deletedAt),
     };
     await tx.trainingSession.upsert({
       where: { id: input.id },
@@ -128,9 +144,32 @@ export class SyncService {
       rightCount: input.rightCount,
       distanceMeters: input.distanceMeters ?? null,
       updatedAt: new Date(input.updatedAt),
-      deletedAt: input.deletedAt ? new Date(input.deletedAt) : null,
+      deletedAt: this.optionalDate(input.deletedAt),
     };
     await tx.shotBlock.upsert({
+      where: { id: input.id },
+      create: { id: input.id, userId, ...data },
+      update: data,
+    });
+  }
+
+  private async applySkillTestResult(
+    tx: Prisma.TransactionClient,
+    userId: string,
+    input: SkillTestResultInputDto
+  ): Promise<void> {
+    const existing = await tx.skillTestResult.findUnique({ where: { id: input.id } });
+    if (!this.wins(existing, userId, input.updatedAt)) {
+      return;
+    }
+    const data = {
+      testKey: input.testKey,
+      score: input.score,
+      takenAt: new Date(input.takenAt),
+      updatedAt: new Date(input.updatedAt),
+      deletedAt: this.optionalDate(input.deletedAt),
+    };
+    await tx.skillTestResult.upsert({
       where: { id: input.id },
       create: { id: input.id, userId, ...data },
       update: data,
