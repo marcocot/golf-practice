@@ -9,7 +9,6 @@ import { signUp } from '@/lib/auth-client';
 
 export function SignUpPage() {
   const { t } = useI18n();
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -20,7 +19,8 @@ export function SignUpPage() {
     event.preventDefault();
     setLoading(true);
     setError(null);
-    const result = await signUp.email({ name, email, password });
+    // BetterAuth requires a name; we don't ask for one, so derive it from the email.
+    const result = await signUp.email({ name: email.split('@')[0] ?? email, email, password });
     setLoading(false);
     if (result.error) {
       setError(result.error.message ?? t('auth.signUp'));
@@ -50,15 +50,6 @@ export function SignUpPage() {
       <Card>
         <CardTitle>{t('auth.signUp')}</CardTitle>
         <form className="mt-4 flex flex-col gap-4" onSubmit={onSubmit}>
-          <div className="flex flex-col gap-1">
-            <Label htmlFor="name">{t('auth.name')}</Label>
-            <Input
-              id="name"
-              required
-              value={name}
-              onChange={(event) => setName(event.target.value)}
-            />
-          </div>
           <div className="flex flex-col gap-1">
             <Label htmlFor="email">{t('auth.email')}</Label>
             <Input
