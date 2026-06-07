@@ -29,7 +29,8 @@ apps/web   React PWA (offline-first client)
 
 ## Running it
 
-You need Node 22, pnpm 10 and Docker.
+You need Node 22, pnpm 10 and Docker. With [`just`](https://github.com/casey/just) the
+whole thing is `just install && just migrate && just dev`; otherwise:
 
 ```sh
 pnpm install
@@ -38,6 +39,8 @@ docker compose up -d db mailpit      # Postgres + a fake SMTP inbox
 pnpm --filter @golf/api prisma:migrate
 pnpm dev                             # starts db/mailpit, then api + web
 ```
+
+Run `just` to see every available command.
 
 - API: http://localhost:3000/api
 - Web: http://localhost:5173
