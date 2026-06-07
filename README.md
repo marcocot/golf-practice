@@ -20,13 +20,6 @@ syncs when it gets back online.
 - **Web** — React + Vite PWA, Tailwind + shadcn/ui, Dexie (IndexedDB), TanStack Query, Recharts
 - **Tooling** — pnpm workspaces, jj, Docker, Jest + Vitest
 
-## Layout
-
-```
-apps/api   NestJS service (auth, sync, health)
-apps/web   React PWA (offline-first client)
-```
-
 ## Running it
 
 Everything runs in Docker — Postgres, the Mailpit inbox, the API and the web app. You only
@@ -42,58 +35,49 @@ The API container applies pending migrations on start, so there's nothing else t
 - API: http://localhost:3000/api
 - Mailpit (verification / reset emails land here): http://localhost:8025
 
-Source is bind-mounted into the api and web containers, so edits hot-reload.
+Source is bind-mounted into the containers, so edits hot-reload. Sign-up sends a verification
+email — open Mailpit, click the link, then sign in. The app starts in English; switch to
+Italian from the Profile tab, and dates and numbers follow the language.
 
-Sign-up sends a verification email — open Mailpit, click the link, then sign in. The web app
-defaults to English; switch to Italian from the Profile tab. Dates and numbers follow the
-chosen language.
-
-**Working on the host instead** (faster file watching on macOS): keep only the infra in
-Docker and run the apps with pnpm.
+If file watching feels sluggish (it can on macOS over a bind mount), run the apps on the host
+and keep only the infra in Docker:
 
 ```sh
 pnpm install
-just infra                           # Postgres + Mailpit only
-just migrate                         # create/apply migrations
-just dev-local                       # api + web on the host
+just infra        # Postgres + Mailpit only
+just migrate      # create/apply migrations
+just dev-local    # api + web on the host
 ```
 
-Run `just` to see every command.
+`just` on its own lists every command.
 
 ## Tests
 
 ```sh
 pnpm --filter @golf/api test         # unit, with coverage gate
-pnpm --filter @golf/api test:e2e     # hits a real Postgres (docker compose up -d db first)
+pnpm --filter @golf/api test:e2e     # hits a real Postgres (just infra first)
 pnpm --filter @golf/web test
 ```
 
 ## How sync works
 
-The phone is the source of truth while you're using it. Everything you log goes straight into
-IndexedDB (via Dexie) and the UI reads from there, so the app is fully usable offline. The
-server is just a backup/second device, and sync reconciles the two.
+While you're using the app the phone is the source of truth. Everything you log lands in
+IndexedDB (through Dexie) and the screens read straight from there, so nothing needs a
+connection. The server only exists to back things up and let another device catch up — sync
+is what reconciles the two.
 
-**Record shape.** Every syncable row (clubs, sessions, shot blocks) carries two extra fields:
+It can afford to be simple, because it's all your own data: two devices almost never touch the
+same record at the same moment. Every row that syncs (clubs, sessions, shot blocks) carries an
+`updatedAt` that doubles as its version, plus a `deletedAt` — deletes are just a flag, so they
+travel like any other edit instead of disappearing.
 
-- `updatedAt` — an ISO timestamp that doubles as the row's version
-- `deletedAt` — set instead of actually deleting, so a delete can travel like any other change
+The client keeps two cursors in a local `meta` table: when it last pushed and when it last
+pulled. A push sends every row changed since the push cursor to `POST /api/sync`; the server
+keeps each one only if its `updatedAt` beats what it already has (and ignores rows owned by
+someone else), then returns its own clock as the next cursor. A pull is the mirror image —
+`GET /api/sync?since=<cursor>` hands back everything that changed server-side, deletions
+included, and the client keeps whichever copy is newer.
 
-**Cursors.** The client keeps two timestamps in a local `meta` table: the last time it pushed
-and the last time it pulled.
-
-**Push.** The client collects every local row with `updatedAt` newer than the push cursor and
-sends them to `POST /api/sync`. The server upserts each one with a last-write-wins rule: it
-applies the incoming row only if its `updatedAt` is newer than what's stored, and it ignores
-rows owned by a different user. The response carries the server time, which becomes the new
-push cursor.
-
-**Pull.** The client asks `GET /api/sync?since=<pull cursor>` and gets back every row the
-server changed after that point (deletions included, as rows with `deletedAt` set). It merges
-them into Dexie with the same rule — keep whichever side has the newer `updatedAt` — and stores
-the server time as the new pull cursor.
-
-**Why this is enough.** The data is single-user: you're the only one editing your own bag and
-sessions. Concurrent edits to the same record are rare, so last-write-wins per record is
-plenty — no operation log, no CRDT. Sync runs when the app loads and after you finish a
-session, and it's safe to run repeatedly because upserts are idempotent.
+So it's last-write-wins, one row at a time. No operation log, no CRDT — they'd be solving a
+conflict this app doesn't have. Sync runs on load and after you finish a session, and because
+every write is an upsert keyed by id, running it again changes nothing.
