@@ -18,6 +18,7 @@ module.exports = [
   {
     files: ['**/*.spec.ts', 'test/**/*.ts'],
     languageOptions: { globals: jestGlobals },
+    rules: { 'tf/no-explicit-as': 'off' },
   },
   {
     // NestJS modules are decorator-only classes with no members by design.
