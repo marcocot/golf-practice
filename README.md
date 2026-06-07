@@ -15,9 +15,10 @@ sync endpoint. The phone app is local-first, so it works on the range with no si
 syncs when it gets back online.
 
 <p align="center">
-  <img src="docs/screenshots/train.png" width="240" alt="Logging a block during a range session" />
-  <img src="docs/screenshots/progress.png" width="240" alt="Consistency trend over recent weeks" />
-  <img src="docs/screenshots/guide.png" width="240" alt="Reference carry distances per club" />
+  <img src="docs/screenshots/train.png" width="220" alt="Logging a block during a range session" />
+  <img src="docs/screenshots/progress.png" width="220" alt="Consistency trend, tested level and per-club breakdown" />
+  <img src="docs/screenshots/skill-tests.png" width="220" alt="Repeatable skill tests" />
+  <img src="docs/screenshots/guide.png" width="220" alt="Your distances and the reference table" />
 </p>
 
 ## Stack
