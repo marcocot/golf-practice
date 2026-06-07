@@ -4,6 +4,7 @@ export interface MailMessage {
   to: string;
   subject: string;
   text: string;
+  html?: string;
 }
 
 let transporter: Transporter | undefined;
@@ -25,5 +26,6 @@ export async function sendMail(message: MailMessage): Promise<void> {
     to: message.to,
     subject: message.subject,
     text: message.text,
+    html: message.html,
   });
 }
