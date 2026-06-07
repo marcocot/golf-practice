@@ -13,6 +13,9 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "prettier": "^3.4.2"
+    "@fido.id/eslint-config-fido": "^2.0.0",
+    "eslint": "^9.34.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
   }
 }
