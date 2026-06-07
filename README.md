@@ -29,26 +29,36 @@ apps/web   React PWA (offline-first client)
 
 ## Running it
 
-You need Node 22, pnpm 10 and Docker. With [`just`](https://github.com/casey/just) the
-whole thing is `just install && just migrate && just dev`; otherwise:
+Everything runs in Docker — Postgres, the Mailpit inbox, the API and the web app. You only
+need Docker (and [`just`](https://github.com/casey/just) for the shortcuts).
 
 ```sh
-pnpm install
-cp .env.example apps/api/.env        # adjust if needed
-docker compose up -d db mailpit      # Postgres + a fake SMTP inbox
-pnpm --filter @golf/api prisma:migrate
-pnpm dev                             # starts db/mailpit, then api + web
+just dev          # or: docker compose up --build
 ```
 
-Run `just` to see every available command.
+The API container applies pending migrations on start, so there's nothing else to wire up.
 
-- API: http://localhost:3000/api
 - Web: http://localhost:5173
-- Mailpit (verification / reset emails land here in dev): http://localhost:8025
+- API: http://localhost:3000/api
+- Mailpit (verification / reset emails land here): http://localhost:8025
+
+Source is bind-mounted into the api and web containers, so edits hot-reload.
 
 Sign-up sends a verification email — open Mailpit, click the link, then sign in. The web app
 defaults to English; switch to Italian from the Profile tab. Dates and numbers follow the
 chosen language.
+
+**Working on the host instead** (faster file watching on macOS): keep only the infra in
+Docker and run the apps with pnpm.
+
+```sh
+pnpm install
+just up                              # Postgres + Mailpit
+just migrate                         # create/apply migrations
+just dev-local                       # api + web on the host
+```
+
+Run `just` to see every command.
 
 ## Tests
 

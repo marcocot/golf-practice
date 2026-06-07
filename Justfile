@@ -16,15 +16,23 @@ up:
 down:
     docker compose down
 
-# Run the full dev stack: infra + api + web
-dev: up
+# Run the full dev stack in Docker (db, mailpit, api, web) with hot reload
+dev:
+    docker compose up --build
+
+# Follow logs of the dev stack
+logs:
+    docker compose logs -f
+
+# Run the dev stack hybrid: infra in Docker, api + web on the host
+dev-local: up
     pnpm --parallel --filter "./apps/*" dev
 
-# Run only the API in watch mode
+# Run only the API on the host in watch mode
 dev-api: up
     pnpm --filter @golf/api dev
 
-# Run only the web app
+# Run only the web app on the host
 dev-web:
     pnpm --filter @golf/web dev
 

@@ -23,5 +23,48 @@ services:
       - '${MAILPIT_SMTP_PORT:-1025}:1025'
       - '${MAILPIT_UI_PORT:-8025}:8025'
 
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: sh -c "pnpm --filter @golf/api exec prisma migrate deploy && pnpm --filter @golf/api dev"
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://golf:golf@db:5432/golf?schema=public
+      BETTER_AUTH_SECRET: dev-better-auth-secret-change-me
+      BETTER_AUTH_URL: http://localhost:3000
+      MAIL_HOST: mailpit
+      MAIL_PORT: 1025
+      WEB_ORIGIN: http://localhost:5173
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./:/repo
+      - /repo/node_modules
+      - /repo/apps/api/node_modules
+      - /repo/apps/web/node_modules
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: sh -c "pnpm --filter @golf/web dev --host"
+    environment:
+      CHOKIDAR_USEPOLLING: 'true'
+      VITE_API_URL: http://localhost:3000/api
+      VITE_AUTH_URL: http://localhost:3000
+    ports:
+      - '5173:5173'
+    volumes:
+      - ./:/repo
+      - /repo/node_modules
+      - /repo/apps/api/node_modules
+      - /repo/apps/web/node_modules
+    depends_on:
+      - api
+
 volumes:
   db-data:
