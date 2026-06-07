@@ -37,6 +37,14 @@ afterEach(async () => {
 describe('pushChanges', () => {
   it('sends records changed since the cursor and advances it', async () => {
     await db.clubs.put(club({ updatedAt: '2026-01-10T00:00:00.000Z' }));
+    await db.skillTestResults.put({
+      id: 's1',
+      testKey: 'gate-7iron',
+      score: 67,
+      takenAt: '2026-01-10T00:00:00.000Z',
+      updatedAt: '2026-01-10T00:00:00.000Z',
+      deletedAt: null,
+    });
     apiFetchMock.mockResolvedValue(jsonResponse({ serverTime: '2026-02-01T00:00:00.000Z' }));
 
     await pushChanges(db);
@@ -46,6 +54,7 @@ describe('pushChanges', () => {
     const raw = typeof init?.body === 'string' ? init.body : '{}';
     const body = JSON.parse(raw);
     expect(body.clubs).toHaveLength(1);
+    expect(body.skillTestResults).toHaveLength(1);
     expect((await db.meta.get('pushCursor'))?.value).toBe('2026-02-01T00:00:00.000Z');
   });
 
@@ -97,6 +106,16 @@ describe('pullChanges', () => {
             deletedAt: null,
           },
         ],
+        skillTestResults: [
+          {
+            id: 'st1',
+            testKey: 'gate-7iron',
+            score: 67,
+            takenAt: '2026-02-01T00:00:00.000Z',
+            updatedAt: '2026-02-01T00:00:00.000Z',
+            deletedAt: null,
+          },
+        ],
       })
     );
 
@@ -106,6 +125,7 @@ describe('pullChanges', () => {
     expect((await db.clubs.get('c2'))?.label).toBe('local-newer');
     expect(await db.trainingSessions.get('s1')).toBeDefined();
     expect((await db.shotBlocks.get('b1'))?.solidCount).toBe(7);
+    expect((await db.skillTestResults.get('st1'))?.score).toBe(67);
     expect((await db.meta.get('pullCursor'))?.value).toBe('2026-03-01T00:00:00.000Z');
     expect(apiFetchMock.mock.calls[0]?.[0]).toContain('/sync?since=');
   });

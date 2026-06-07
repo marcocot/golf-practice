@@ -70,3 +70,18 @@ export async function addBlock(input: BlockInput, db: GolfDb = defaultDb): Promi
   const timestamp = now();
   await db.shotBlocks.put({ id: uuid(), ...input, updatedAt: timestamp, deletedAt: null });
 }
+
+export async function addSkillTestResult(
+  input: { testKey: string; score: number },
+  db: GolfDb = defaultDb
+): Promise<void> {
+  const timestamp = now();
+  await db.skillTestResults.put({
+    id: uuid(),
+    testKey: input.testKey,
+    score: input.score,
+    takenAt: timestamp,
+    updatedAt: timestamp,
+    deletedAt: null,
+  });
+}

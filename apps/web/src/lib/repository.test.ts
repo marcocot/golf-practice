@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { GolfDb } from '@/lib/db';
-import { addBlock, ensureBag, startSession } from '@/lib/repository';
+import { addBlock, addSkillTestResult, ensureBag, startSession } from '@/lib/repository';
 
 let db: GolfDb;
 
@@ -74,5 +74,15 @@ describe('addBlock', () => {
     const blocks = await db.shotBlocks.where('sessionId').equals(sessionId).toArray();
     expect(blocks).toHaveLength(1);
     expect(blocks[0]?.solidCount).toBe(7);
+  });
+});
+
+describe('addSkillTestResult', () => {
+  it('persists a skill test result with a timestamp', async () => {
+    await addSkillTestResult({ testKey: 'gate-7iron', score: 67 }, db);
+    const results = await db.skillTestResults.toArray();
+    expect(results).toHaveLength(1);
+    expect(results[0]).toMatchObject({ testKey: 'gate-7iron', score: 67, deletedAt: null });
+    expect(results[0]?.takenAt).toBeTruthy();
   });
 });
