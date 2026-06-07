@@ -14,6 +14,12 @@ The backend is where the actual learning happens: NestJS + Prisma + Postgres, au
 sync endpoint. The phone app is local-first, so it works on the range with no signal and
 syncs when it gets back online.
 
+<p align="center">
+  <img src="docs/screenshots/train.png" width="240" alt="Logging a block during a range session" />
+  <img src="docs/screenshots/progress.png" width="240" alt="Consistency trend over recent weeks" />
+  <img src="docs/screenshots/guide.png" width="240" alt="Reference carry distances per club" />
+</p>
+
 ## Stack
 
 - **API** — NestJS 11, Prisma, PostgreSQL, BetterAuth (email/password), pino logging
