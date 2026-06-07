@@ -16,7 +16,7 @@ export function ForgotPasswordPage() {
   async function onSubmit(event: FormEvent) {
     event.preventDefault();
     setLoading(true);
-    await requestPasswordReset({ email, redirectTo: '/signin' });
+    await requestPasswordReset({ email });
     setLoading(false);
     setDone(true);
   }

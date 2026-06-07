@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { AppLayout } from '@/components/AppLayout';
 import { AuthGate } from '@/components/AuthGate';
 import { ForgotPasswordPage } from '@/pages/ForgotPasswordPage';
+import { ResetPasswordPage } from '@/pages/ResetPasswordPage';
 import { GuidePage } from '@/pages/GuidePage';
 import { ProfilePage } from '@/pages/ProfilePage';
 import { ProgressPage } from '@/pages/ProgressPage';
@@ -15,6 +16,7 @@ export function App() {
       <Route path="/signin" element={<SignInPage />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/forgot" element={<ForgotPasswordPage />} />
+      <Route path="/reset-password" element={<ResetPasswordPage />} />
       <Route element={<AuthGate />}>
         <Route element={<AppLayout />}>
           <Route index element={<TrainPage />} />
