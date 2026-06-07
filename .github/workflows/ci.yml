@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: golf
+          POSTGRES_PASSWORD: golf
+          POSTGRES_DB: golf
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U golf"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgresql://golf:golf@localhost:5432/golf?schema=public
+      BETTER_AUTH_SECRET: ci-better-auth-secret-value
+      BETTER_AUTH_URL: http://localhost:3000
+      WEB_ORIGIN: http://localhost:5173
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Apply database migrations
+        run: pnpm --filter @golf/api exec prisma migrate deploy
+
+      - name: Lint
+        run: pnpm -r lint
+
+      - name: Type-check web
+        run: pnpm --filter @golf/web typecheck
+
+      - name: API unit tests
+        run: pnpm --filter @golf/api test
+
+      - name: API e2e tests
+        run: pnpm --filter @golf/api test:e2e
+
+      - name: Web tests
+        run: pnpm --filter @golf/web test
+
+      - name: Build
+        run: pnpm -r build
