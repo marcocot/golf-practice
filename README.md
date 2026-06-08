@@ -8,7 +8,8 @@ So instead of logging shots one by one, you log a *block* — say 10 balls with 
 and tap three things: how many were solid, where they went (left / straight / right), and the
 rough distance off the range markers. From that the app tracks a consistency score over time
 and shows which level you're roughly in. There's also a reference card with expected carry
-distances per club and a few fixes for the usual misses.
+distances per club and a few fixes for the usual misses, plus a rules card that boils the
+penalty system down to three levels with a decision flowchart and the common relief situations.
 
 The backend is where the actual learning happens: NestJS + Prisma + Postgres, auth, and a
 sync endpoint. The phone app is local-first, so it works on the range with no signal and
@@ -19,6 +20,7 @@ syncs when it gets back online.
   <img src="docs/screenshots/progress.png" width="220" alt="Consistency trend, tested level and per-club breakdown" />
   <img src="docs/screenshots/skill-tests.png" width="220" alt="Repeatable skill tests" />
   <img src="docs/screenshots/guide.png" width="220" alt="Your distances and the reference table" />
+  <img src="docs/screenshots/rules.png" width="220" alt="Rules and penalties reference: the three penalty levels and a decision flowchart" />
 </p>
 
 ## Stack

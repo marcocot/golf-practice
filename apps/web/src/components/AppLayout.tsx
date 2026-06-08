@@ -1,4 +1,4 @@
-import { BookOpen, LineChart, Target, User } from 'lucide-react';
+import { BookOpen, LineChart, Scale, Target, User } from 'lucide-react';
 import { useEffect } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useI18n } from '@/i18n';
@@ -10,6 +10,7 @@ const TABS: { to: string; icon: typeof Target; label: TranslationKey }[] = [
   { to: '/', icon: Target, label: 'nav.train' },
   { to: '/progress', icon: LineChart, label: 'nav.progress' },
   { to: '/guide', icon: BookOpen, label: 'nav.guide' },
+  { to: '/rules', icon: Scale, label: 'nav.rules' },
   { to: '/profile', icon: User, label: 'nav.profile' },
 ];
 

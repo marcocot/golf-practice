@@ -6,6 +6,7 @@ import { ResetPasswordPage } from '@/pages/ResetPasswordPage';
 import { GuidePage } from '@/pages/GuidePage';
 import { ProfilePage } from '@/pages/ProfilePage';
 import { ProgressPage } from '@/pages/ProgressPage';
+import { RulesPage } from '@/pages/RulesPage';
 import { SignInPage } from '@/pages/SignInPage';
 import { SkillTestsPage } from '@/pages/SkillTestsPage';
 import { SignUpPage } from '@/pages/SignUpPage';
@@ -24,6 +25,7 @@ export function App() {
           <Route path="/progress" element={<ProgressPage />} />
           <Route path="/skill-tests" element={<SkillTestsPage />} />
           <Route path="/guide" element={<GuidePage />} />
+          <Route path="/rules" element={<RulesPage />} />
           <Route path="/profile" element={<ProfilePage />} />
         </Route>
       </Route>
