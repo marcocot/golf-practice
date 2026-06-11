@@ -10,3 +10,5 @@ coverage/
 *.tsbuildinfo
 .vite/
 dev-dist/
+# Scraper output (regenerable); the shipped copies live in apps/web/public/quiz
+data/
