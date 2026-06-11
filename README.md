@@ -21,7 +21,9 @@ syncs when it gets back online.
   <img src="docs/screenshots/skill-tests.png" width="220" alt="Repeatable skill tests" />
   <img src="docs/screenshots/guide.png" width="220" alt="Your distances and the reference table" />
   <img src="docs/screenshots/rules.png" width="220" alt="Rules and penalties reference: the three penalty levels and a decision flowchart" />
-  <img src="docs/screenshots/quiz.png" width="220" alt="Rules quiz: a question with the related official rule shown after a wrong answer" />
+  <img src="docs/screenshots/quiz-question.png" width="220" alt="Rules quiz: a multiple-choice question" />
+  <img src="docs/screenshots/quiz.png" width="220" alt="Rules quiz: after a wrong answer, the related official rule is shown inline" />
+  <img src="docs/screenshots/quiz-stats.png" width="220" alt="Quiz stats: accuracy, streaks and the sections to review" />
 </p>
 
 ## Stack
