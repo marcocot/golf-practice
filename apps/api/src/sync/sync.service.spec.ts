@@ -14,7 +14,7 @@ function model(): ModelMock {
 }
 
 function emptyPayload(): PushPayloadDto {
-  return { clubs: [], trainingSessions: [], shotBlocks: [], skillTestResults: [] };
+  return { clubs: [], trainingSessions: [], shotBlocks: [], skillTestResults: [], quizResults: [] };
 }
 
 describe('SyncService', () => {
@@ -24,6 +24,7 @@ describe('SyncService', () => {
     trainingSession: ModelMock;
     shotBlock: ModelMock;
     skillTestResult: ModelMock;
+    quizResult: ModelMock;
     $transaction: jest.Mock;
   };
 
@@ -35,6 +36,7 @@ describe('SyncService', () => {
       trainingSession: model(),
       shotBlock: model(),
       skillTestResult: model(),
+      quizResult: model(),
       $transaction: jest.fn((arg) => (Array.isArray(arg) ? Promise.all(arg) : arg(prisma))),
     };
     const moduleRef = await Test.createTestingModule({

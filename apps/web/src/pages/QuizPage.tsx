@@ -5,6 +5,7 @@ import { Card, CardMuted, CardTitle } from '@/components/ui/card';
 import { useI18n } from '@/i18n';
 import { useQuizPool } from '@/hooks/useQuizPool';
 import { useReference } from '@/hooks/useReference';
+import { useSync } from '@/hooks/useSync';
 import { addQuizResult } from '@/lib/repository';
 import {
   type Level,
@@ -95,6 +96,7 @@ export function QuizPage() {
   const { t, language } = useI18n();
   const pool = useQuizPool();
   const reference = useReference();
+  const sync = useSync();
 
   const [sections, setSections] = useState<Section[]>([]);
   const [levels, setLevels] = useState<Level[]>([]);
@@ -136,6 +138,7 @@ export function QuizPage() {
   }
 
   function next() {
+    if (index + 1 >= (session?.length ?? 0)) sync.mutate(); // round done — back up the results
     setPicked(null);
     setIndex((i) => i + 1);
   }

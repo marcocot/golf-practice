@@ -25,6 +25,7 @@ model User {
   trainingSessions TrainingSession[]
   shotBlocks       ShotBlock[]
   skillTestResults SkillTestResult[]
+  quizResults      QuizResult[]
 
   @@map("user")
 }
@@ -155,6 +156,22 @@ model SkillTestResult {
   createdAt DateTime  @default(now())
   updatedAt DateTime
   deletedAt DateTime?
+
+  @@index([userId, updatedAt])
+}
+
+model QuizResult {
+  id         String    @id @default(uuid()) @db.Uuid
+  userId     String    @db.Uuid
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quizId     Int
+  section    String
+  level      String
+  correct    Boolean
+  answeredAt DateTime
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime
+  deletedAt  DateTime?
 
   @@index([userId, updatedAt])
 }

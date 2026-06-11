@@ -1,9 +1,17 @@
 import { Injectable } from '@nestjs/common';
-import { Club, Prisma, ShotBlock, SkillTestResult, TrainingSession } from '@prisma/client';
+import {
+  Club,
+  Prisma,
+  QuizResult,
+  ShotBlock,
+  SkillTestResult,
+  TrainingSession,
+} from '@prisma/client';
 import { PrismaService } from '@/prisma/prisma.service';
 import {
   ClubInputDto,
   PushPayloadDto,
+  QuizResultInputDto,
   ShotBlockInputDto,
   SkillTestResultInputDto,
   TrainingSessionInputDto,
@@ -15,6 +23,7 @@ export interface SyncSnapshot {
   trainingSessions: TrainingSession[];
   shotBlocks: ShotBlock[];
   skillTestResults: SkillTestResult[];
+  quizResults: QuizResult[];
 }
 
 interface Versioned {
@@ -31,12 +40,14 @@ export class SyncService {
     const serverTime = new Date();
     const where = { userId, updatedAt: { gt: cursor } };
 
-    const [clubs, trainingSessions, shotBlocks, skillTestResults] = await this.prisma.$transaction([
-      this.prisma.club.findMany({ where }),
-      this.prisma.trainingSession.findMany({ where }),
-      this.prisma.shotBlock.findMany({ where }),
-      this.prisma.skillTestResult.findMany({ where }),
-    ]);
+    const [clubs, trainingSessions, shotBlocks, skillTestResults, quizResults] =
+      await this.prisma.$transaction([
+        this.prisma.club.findMany({ where }),
+        this.prisma.trainingSession.findMany({ where }),
+        this.prisma.shotBlock.findMany({ where }),
+        this.prisma.skillTestResult.findMany({ where }),
+        this.prisma.quizResult.findMany({ where }),
+      ]);
 
     return {
       serverTime: serverTime.toISOString(),
@@ -44,6 +55,7 @@ export class SyncService {
       trainingSessions,
       shotBlocks,
       skillTestResults,
+      quizResults,
     };
   }
 
@@ -60,6 +72,9 @@ export class SyncService {
       }
       for (const result of payload.skillTestResults ?? []) {
         await this.applySkillTestResult(tx, userId, result);
+      }
+      for (const result of payload.quizResults ?? []) {
+        await this.applyQuizResult(tx, userId, result);
       }
     });
 
@@ -170,6 +185,31 @@ export class SyncService {
       deletedAt: this.optionalDate(input.deletedAt),
     };
     await tx.skillTestResult.upsert({
+      where: { id: input.id },
+      create: { id: input.id, userId, ...data },
+      update: data,
+    });
+  }
+
+  private async applyQuizResult(
+    tx: Prisma.TransactionClient,
+    userId: string,
+    input: QuizResultInputDto
+  ): Promise<void> {
+    const existing = await tx.quizResult.findUnique({ where: { id: input.id } });
+    if (!this.wins(existing, userId, input.updatedAt)) {
+      return;
+    }
+    const data = {
+      quizId: input.quizId,
+      section: input.section,
+      level: input.level,
+      correct: input.correct,
+      answeredAt: new Date(input.answeredAt),
+      updatedAt: new Date(input.updatedAt),
+      deletedAt: this.optionalDate(input.deletedAt),
+    };
+    await tx.quizResult.upsert({
       where: { id: input.id },
       create: { id: input.id, userId, ...data },
       update: data,

@@ -3,6 +3,7 @@ import {
   type ClubRecord,
   db as defaultDb,
   type GolfDb,
+  type QuizResultRecord,
   type ShotBlockRecord,
   type SkillTestResultRecord,
   type TrainingSessionRecord,
@@ -19,6 +20,7 @@ export interface SyncSnapshot {
   trainingSessions: TrainingSessionRecord[];
   shotBlocks: ShotBlockRecord[];
   skillTestResults: SkillTestResultRecord[];
+  quizResults: QuizResultRecord[];
 }
 
 async function getCursor(db: GolfDb, key: string): Promise<string> {
@@ -42,25 +44,27 @@ async function mergeRecord<T extends { id: string; updatedAt: string }>(
 
 export async function pushChanges(db: GolfDb = defaultDb): Promise<void> {
   const since = await getCursor(db, PUSH_CURSOR);
-  const [clubs, trainingSessions, shotBlocks, skillTestResults] = await Promise.all([
+  const [clubs, trainingSessions, shotBlocks, skillTestResults, quizResults] = await Promise.all([
     db.clubs.filter((r) => r.updatedAt > since).toArray(),
     db.trainingSessions.filter((r) => r.updatedAt > since).toArray(),
     db.shotBlocks.filter((r) => r.updatedAt > since).toArray(),
     db.skillTestResults.filter((r) => r.updatedAt > since).toArray(),
+    db.quizResults.filter((r) => r.updatedAt > since).toArray(),
   ]);
 
   if (
     clubs.length === 0 &&
     trainingSessions.length === 0 &&
     shotBlocks.length === 0 &&
-    skillTestResults.length === 0
+    skillTestResults.length === 0 &&
+    quizResults.length === 0
   ) {
     return;
   }
 
   const response = await apiFetch('/sync', {
     method: 'POST',
-    body: JSON.stringify({ clubs, trainingSessions, shotBlocks, skillTestResults }),
+    body: JSON.stringify({ clubs, trainingSessions, shotBlocks, skillTestResults, quizResults }),
   });
   const result: { serverTime: string } = await response.json();
   await setCursor(db, PUSH_CURSOR, result.serverTime);
@@ -73,7 +77,7 @@ export async function pullChanges(db: GolfDb = defaultDb): Promise<void> {
 
   await db.transaction(
     'rw',
-    [db.clubs, db.trainingSessions, db.shotBlocks, db.skillTestResults],
+    [db.clubs, db.trainingSessions, db.shotBlocks, db.skillTestResults, db.quizResults],
     async () => {
       for (const club of snapshot.clubs) {
         await mergeRecord(db.clubs, club);
@@ -86,6 +90,9 @@ export async function pullChanges(db: GolfDb = defaultDb): Promise<void> {
       }
       for (const result of snapshot.skillTestResults ?? []) {
         await mergeRecord(db.skillTestResults, result);
+      }
+      for (const result of snapshot.quizResults ?? []) {
+        await mergeRecord(db.quizResults, result);
       }
     }
   );

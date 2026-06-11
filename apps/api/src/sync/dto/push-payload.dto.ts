@@ -1,6 +1,7 @@
 import { Type } from 'class-transformer';
 import {
   IsArray,
+  IsBoolean,
   IsDateString,
   IsEnum,
   IsInt,
@@ -93,6 +94,23 @@ export class SkillTestResultInputDto extends SyncableDto {
   takenAt!: string;
 }
 
+export class QuizResultInputDto extends SyncableDto {
+  @IsInt()
+  quizId!: number;
+
+  @IsString()
+  section!: string;
+
+  @IsString()
+  level!: string;
+
+  @IsBoolean()
+  correct!: boolean;
+
+  @IsDateString()
+  answeredAt!: string;
+}
+
 export class PushPayloadDto {
   @IsArray()
   @ValidateNested({ each: true })
@@ -113,4 +131,9 @@ export class PushPayloadDto {
   @ValidateNested({ each: true })
   @Type(() => SkillTestResultInputDto)
   skillTestResults: SkillTestResultInputDto[] = [];
+
+  @IsArray()
+  @ValidateNested({ each: true })
+  @Type(() => QuizResultInputDto)
+  quizResults: QuizResultInputDto[] = [];
 }

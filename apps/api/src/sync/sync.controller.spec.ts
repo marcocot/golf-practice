@@ -34,6 +34,7 @@ describe('SyncController', () => {
       trainingSessions: [],
       shotBlocks: [],
       skillTestResults: [],
+      quizResults: [],
     };
     push.mockResolvedValueOnce({ serverTime: 't' });
 
