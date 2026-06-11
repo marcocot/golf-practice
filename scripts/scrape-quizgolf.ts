@@ -114,7 +114,10 @@ function parseQuiz(html: string, id: number): Quiz | null {
   const imgSrc = firstMatch(html, /<img[^>]*class="img-fluid[^"]*"[^>]*src="([^"]+)"/i);
   const image = imgSrc
     ? {
-        url: imgSrc.startsWith('http') ? imgSrc : `${BASE}/${imgSrc.replace(/^\//, '')}`,
+        url:
+          imgSrc.startsWith('http') || imgSrc.startsWith('data:')
+            ? imgSrc
+            : `${BASE}/${imgSrc.replace(/^\//, '')}`,
         file: null,
       }
     : null;
@@ -167,9 +170,28 @@ async function fetchQuiz(id: number): Promise<string> {
   throw new Error(`failed to fetch id ${id} (still rate-limited after retries)`);
 }
 
+// Some source images are inlined as a base64 data URI rather than a file.
+async function saveDataUri(dataUri: string, dir: string, name: string): Promise<string | null> {
+  const m = dataUri.match(/^data:image\/([\w.+-]+);base64,(.+)$/s);
+  if (!m) return null;
+  const ext = m[1].toLowerCase() === 'jpeg' ? 'jpg' : m[1].toLowerCase();
+  const file = `${name}.${ext}`;
+  try {
+    await writeFile(join(dir, file), Buffer.from(m[2], 'base64'));
+    return file;
+  } catch {
+    return null;
+  }
+}
+
 async function downloadImage(url: string, dir: string): Promise<string | null> {
-  const decoded = decodeURIComponent(new URL(url).pathname);
-  const name = basename(decoded).replace(/\s+/g, '-');
+  let name = basename(decodeURIComponent(new URL(url).pathname)).replace(/\s+/g, '-');
+  let fetchUrl = new URL(url).href;
+  // A few source URLs are missing their extension — try .jpg.
+  if (!/\.[a-z0-9]+$/i.test(name)) {
+    name += '.jpg';
+    fetchUrl += '.jpg';
+  }
   const dest = join(dir, name);
   try {
     await access(dest);
@@ -178,7 +200,7 @@ async function downloadImage(url: string, dir: string): Promise<string | null> {
     // not present, fetch it
   }
   try {
-    const res = await fetch(new URL(url).href, { headers: { 'User-Agent': UA } });
+    const res = await fetch(fetchUrl, { headers: { 'User-Agent': UA } });
     if (!res.ok) return null;
     const buf = Buffer.from(await res.arrayBuffer());
     await writeFile(dest, buf);
@@ -245,7 +267,14 @@ async function main() {
       if (!quiz) {
         missing++;
       } else {
-        if (quiz.image) quiz.image.file = await downloadImage(quiz.image.url, imgDir);
+        if (quiz.image) {
+          if (quiz.image.url.startsWith('data:')) {
+            quiz.image.file = await saveDataUri(quiz.image.url, imgDir, `quiz${id}`);
+            quiz.image.url = ''; // drop the heavy inline payload from the JSON
+          } else {
+            quiz.image.file = await downloadImage(quiz.image.url, imgDir);
+          }
+        }
         quizzes.push(quiz);
       }
     } catch (err) {
