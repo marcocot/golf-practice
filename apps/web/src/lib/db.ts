@@ -41,6 +41,17 @@ export interface SkillTestResultRecord {
   deletedAt: string | null;
 }
 
+export interface QuizResultRecord {
+  id: string;
+  quizId: number;
+  section: string;
+  level: string;
+  correct: boolean;
+  answeredAt: string;
+  updatedAt: string;
+  deletedAt: string | null;
+}
+
 export interface MetaRecord {
   key: string;
   value: string;
@@ -51,6 +62,7 @@ export class GolfDb extends Dexie {
   trainingSessions!: Table<TrainingSessionRecord, string>;
   shotBlocks!: Table<ShotBlockRecord, string>;
   skillTestResults!: Table<SkillTestResultRecord, string>;
+  quizResults!: Table<QuizResultRecord, string>;
   meta!: Table<MetaRecord, string>;
 
   constructor(name = 'golf-practice') {
@@ -63,6 +75,9 @@ export class GolfDb extends Dexie {
     });
     this.version(2).stores({
       skillTestResults: 'id, testKey, updatedAt',
+    });
+    this.version(3).stores({
+      quizResults: 'id, quizId, updatedAt',
     });
   }
 }

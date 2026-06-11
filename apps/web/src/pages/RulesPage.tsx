@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 import { Card, CardMuted, CardTitle } from '@/components/ui/card';
 import { useI18n } from '@/i18n';
 import {
@@ -7,6 +9,7 @@ import {
   type RulesContent,
   RULES,
 } from '@/domain/rules';
+import { officialRuleUrl } from '@/domain/quiz';
 import { cn } from '@/lib/utils';
 
 const LEVEL_STYLES: Record<PenaltyLevel, { dot: string; chip: string; head: string }> = {
@@ -28,6 +31,18 @@ const LEVEL_STYLES: Record<PenaltyLevel, { dot: string; chip: string; head: stri
 };
 
 function RuleTag({ children }: { children: string }) {
+  const url = officialRuleUrl(children);
+  if (url) {
+    return (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whitespace-nowrap rounded-md bg-primary/15 px-1.5 py-0.5 font-mono text-xs text-primary underline-offset-2 hover:underline">
+        {children}
+      </a>
+    );
+  }
   return (
     <span className="whitespace-nowrap rounded-md bg-muted px-1.5 py-0.5 font-mono text-xs text-muted-foreground">
       {children}
@@ -199,7 +214,7 @@ interface ReliefArea {
 }
 
 export function RulesPage() {
-  const { language } = useI18n();
+  const { t, language } = useI18n();
   const c = RULES[language];
   const reliefAreas: ReliefArea[] = [
     { ...c.yellow, dot: 'bg-amber-400' },
@@ -211,6 +226,28 @@ export function RulesPage() {
       <div>
         <h1 className="text-2xl font-bold">{c.pageTitle}</h1>
         <CardMuted className="mt-1">{c.pageSubtitle}</CardMuted>
+      </div>
+
+      {/* Hub: quiz + stats */}
+      <div className="flex flex-col gap-2">
+        <Link to="/rules/quiz">
+          <Card className="flex items-center gap-3">
+            <div className="flex-1">
+              <CardTitle>{t('rules.hubQuiz')}</CardTitle>
+              <CardMuted className="mt-1">{t('rules.hubQuizDesc')}</CardMuted>
+            </div>
+            <ChevronRight className="h-5 w-5 shrink-0 text-muted-foreground" />
+          </Card>
+        </Link>
+        <Link to="/rules/stats">
+          <Card className="flex items-center gap-3">
+            <div className="flex-1">
+              <CardTitle>{t('rules.hubStats')}</CardTitle>
+              <CardMuted className="mt-1">{t('rules.hubStatsDesc')}</CardMuted>
+            </div>
+            <ChevronRight className="h-5 w-5 shrink-0 text-muted-foreground" />
+          </Card>
+        </Link>
       </div>
 
       {/* The three levels */}

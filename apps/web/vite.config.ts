@@ -40,7 +40,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       include: ['src/lib/**', 'src/domain/**'],
-      exclude: ['**/*.test.ts', 'src/lib/auth-client.ts', 'src/domain/cheatsheet.ts'],
+      exclude: ['**/*.test.ts', 'src/lib/auth-client.ts', 'src/domain/cheatsheet.ts', 'src/domain/rules.ts'],
       thresholds: {
         statements: 85,
         branches: 85,

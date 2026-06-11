@@ -1,5 +1,11 @@
 import { useLiveQuery } from 'dexie-react-hooks';
-import { type ClubRecord, db, type ShotBlockRecord, type SkillTestResultRecord } from '@/lib/db';
+import {
+  type ClubRecord,
+  db,
+  type QuizResultRecord,
+  type ShotBlockRecord,
+  type SkillTestResultRecord,
+} from '@/lib/db';
 
 export function useClubs(): ClubRecord[] {
   return useLiveQuery(
@@ -23,4 +29,8 @@ export function useSkillTestResults(): SkillTestResultRecord[] {
     [],
     []
   );
+}
+
+export function useQuizResults(): QuizResultRecord[] {
+  return useLiveQuery(() => db.quizResults.filter((result) => !result.deletedAt).toArray(), [], []);
 }

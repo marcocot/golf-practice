@@ -1,0 +1,3129 @@
+[
+  {
+    "id": 1,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "Le regole del Golf possono essere modificate per i giocatori sordi",
+    "image": null,
+    "answers": [
+      {
+        "text": "Falso",
+        "correct": true
+      },
+      {
+        "text": "Vero",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "25_1"
+      }
+    ],
+    "referenceText": "Controlla la regola 25.1"
+  },
+  {
+    "id": 2,
+    "section": "Il gioco in generale/Situazioni in cui ovviare e procedure",
+    "level": "Medio/Facile",
+    "question": "Filippo trova la sua palla in bunker (foto) poggiata ad un rametto.\nPurtroppo togliendo il ramo la palla scivolerebbe indietro muovendosi, però eseguire il colpo in questa situazione è molto molto difficile.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/palla-impedimento-sciolto.jpg",
+      "file": "palla-impedimento-sciolto.jpg"
+    },
+    "answers": [
+      {
+        "text": "Il rametto è un impedimento sciolto ed in bunker non può mai essere rimosso",
+        "correct": false
+      },
+      {
+        "text": "Filippo può dichiarare la palla ingiocabile e dropparla o può tentare di eseguire il colpo senza togliere il rametto",
+        "correct": true
+      },
+      {
+        "text": "Il rametto può essere tolto e se la palla si muove dovrà essere ripiazzata senza penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "15_1b"
+      },
+      {
+        "type": "Regole",
+        "ref": "9_4"
+      }
+    ],
+    "referenceText": "Controlla le regole 15.1b e 9.4"
+  },
+  {
+    "id": 3,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio",
+    "question": "In una gara stroke play, Flavio scopre che la buca è stata danneggiata in modo evidente dall'asta che ne ha rovinato il bordo.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/buca_rovinata.jpg",
+      "file": "buca_rovinata.jpg"
+    },
+    "answers": [
+      {
+        "text": "Flavio può riparare la buca",
+        "correct": true
+      },
+      {
+        "text": "A gara iniziata la buca non può più essere riparata",
+        "correct": false
+      },
+      {
+        "text": "Flavio può riparare la buca solo se non è disponibile nessun componente del Comitato",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "13_1c"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "13.1c(2)/1"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "13.1c(2)/2"
+      }
+    ],
+    "referenceText": "Controlla la Regola 13.1c e il chiarimento 13.1c(2)/1 e 13.1c(2)/2"
+  },
+  {
+    "id": 4,
+    "section": "Il gioco in generale",
+    "level": "Medio",
+    "question": "L'assistente di un giocatore non vedente si posiziona intenzionalmente vicino ad una estensione della linea di gioco dietro alla palla",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità solo se lo fa prima del colpo ma si toglie durante il colpo",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Le regole del Golf non prevedono che un assistente possa posizionarsi intenzionalmente vicino ad una estensione della linea di gioco dietro la palla",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "25_2d"
+      },
+      {
+        "type": "Regole",
+        "ref": "10_2b(4)"
+      }
+    ],
+    "referenceText": "Controlla la regola 25.2d e 10.2b(4)"
+  },
+  {
+    "id": 5,
+    "section": "Definizioni",
+    "level": "Medio",
+    "question": "La palla di Marco giace su un ramo di un albero che sporge all'interno dell'area definita dal Comitato con paletti e linee gialle.",
+    "image": null,
+    "answers": [
+      {
+        "text": "La palla non è in un'area di penalità in quanto non tocca il terreno.",
+        "correct": false
+      },
+      {
+        "text": "La palla è in una condizione anormale del campo",
+        "correct": false
+      },
+      {
+        "text": "La palla è in un'area di penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Area_di_Penalit&agrave;"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Area di Penalità' che dice tra l'altro il bordo di un'area di penalità si estende sia verticalmente al di sopra del terreno sia al di sotto del terreno"
+  },
+  {
+    "id": 6,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Difficile",
+    "question": "Un Comitato può adottare una regola locale che consenta allo staff della manutenzione di rimuovere l’acqua temporanea sul putting green quando la linea di gioco di un giocatore ha interferenza con tale condizione",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/rulli-su-green.jpg",
+      "file": "rulli-su-green.jpg"
+    },
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": true
+      },
+      {
+        "text": "Falso",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [],
+    "referenceText": "Controlla le Procedure per il Comitato capitolo 8J Regola locale J-2"
+  },
+  {
+    "id": 7,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Difficile",
+    "question": "Dall'area di partenza Roberto gioca una palla provvisoria che va a fermarsi nella stessa zona dell'originaria. Ambedue le palle sono della stessa marca e colore. Arrivato sul posto Roberto trova una sola palla, ma non sa se è l'originaria o la provvisoria.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non potendo identificare la palla Roberto deve ritornare sull'area di partenza tirando il quinto colpo",
+        "correct": false
+      },
+      {
+        "text": "Roberto dovrà considerare la palla trovata come fosse la provvisoria, tirerà il quarto colpo",
+        "correct": true
+      },
+      {
+        "text": "Roberto dovrà considerare la palla trovata come fosse l'originaria, tirerà il secondo colpo",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "18_3c(2)"
+      }
+    ],
+    "referenceText": "Controlla la regola 18.3c(2)"
+  },
+  {
+    "id": 8,
+    "section": "Definizioni/Il gioco in generale",
+    "level": "Facile",
+    "question": "In una gara stroke-play Mario chiede al compagno di gara la lunghezza della buca che sta per giocare",
+    "image": null,
+    "answers": [
+      {
+        "text": "Mario incorre in due colpi di penalità",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Mario incorre in penalità solo se ottiene la risposta",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Consiglio"
+      },
+      {
+        "type": "Regole",
+        "ref": "10_2a"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Consiglio' e la regola 10.2a"
+  },
+  {
+    "id": 9,
+    "section": "Definizioni/Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "In una gara stroke-play la palla di Luisa, ferma sul green dopo essere stata ripiazzata, viene spostata dal forte vento.\nLuisa è incerta su come procedere, non sa se deve rimetterla nella posizione originaria o giocarla nella nuova posizione",
+    "image": null,
+    "answers": [
+      {
+        "text": "La palla deve essere giocata nella nuova posizione poichè il vento è un'influenza estranea",
+        "correct": false
+      },
+      {
+        "text": "La palla deve essere giocata nella sua posizione originaria, con un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "La palla deve essere giocata nella sua posizione originaria, senza penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Forze_Naturali"
+      },
+      {
+        "type": "Regole",
+        "ref": "9_3"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Forze Naturali' e l'eccezione alla regola 9.3"
+  },
+  {
+    "id": 10,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Facile",
+    "question": "Carlo e Diana sono partner in una gara stroke play four-ball e per portare meno peso decidono di condividere i ferri che Carlo ha nella sacca.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità se nella sacca Carlo ha al massimo 14 bastoni",
+        "correct": true
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": false
+      },
+      {
+        "text": "Carlo e Diana incorrono in due colpi di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "23_7"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Four-Ball"
+      }
+    ],
+    "referenceText": "Controlla la regola 23.7 che nella gara 'Four-Ball' permette ai partner di condividere i bastoni , purchè il numero totale dei bastoni trasportati dai partner non ecceda quattordici"
+  },
+  {
+    "id": 11,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Facile",
+    "question": "In una gara stroke-play per errore Mario, in bunker, effettua un colpo con la palla di Gino, ma la palla si sposta di pochi centimetri.\nGino non sapendo come proseguire effettua il colpo dal punto in cui Mario ha mandato la palla.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Gino incorre in due colpi di penalità e deve ripetere il colpo dopo aver ripiazzato la palla",
+        "correct": false
+      },
+      {
+        "text": "Gino incorre nella penalità generale di due colpi",
+        "correct": true
+      },
+      {
+        "text": "Gino è squalificato",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "14_7b(1)"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Grave_Infrazione"
+      }
+    ],
+    "referenceText": "Gino ha commesso un'infrazione non grave , controlla la regola 14.7b(1) e la definizione di 'Grave Infrazione'"
+  },
+  {
+    "id": 12,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Facile",
+    "question": "Ivo disputa contemporaneamente una gara stroke-play medal ed una gara stableford",
+    "image": null,
+    "answers": [
+      {
+        "text": "Ivo può disputare contemporaneamente le due gare, ma deve registrare i due punteggi su score diversi",
+        "correct": false
+      },
+      {
+        "text": "Ivo può competere sia nella classifica stroke-play sia nella stableford",
+        "correct": true
+      },
+      {
+        "text": "Non si può competere contemporaneamente in due gare con formula diversa",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "21"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "21/1"
+      }
+    ],
+    "referenceText": "Controlla la regola 21 e il chiarimento 21/1"
+  },
+  {
+    "id": 13,
+    "section": "Il gioco in generale",
+    "level": "Facile",
+    "question": "I giocatori possono accordarsi per giocare fuori turno praticando il “Ready-Golf”",
+    "image": null,
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": true
+      },
+      {
+        "text": "Falso",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "5_6b(2)"
+      },
+      {
+        "type": "Regole",
+        "ref": "6_4b(2)"
+      }
+    ],
+    "referenceText": "Controlla la regola 5.6b(2) e 6.4b(2)"
+  },
+  {
+    "id": 14,
+    "section": "Definizioni",
+    "level": "Medio/Difficile",
+    "question": "Il terreno erboso all'interno di un bunker non fa parte del bunker",
+    "image": null,
+    "answers": [
+      {
+        "text": "Falso",
+        "correct": false
+      },
+      {
+        "text": "Vero",
+        "correct": true
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Bunker"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Bunker'"
+  },
+  {
+    "id": 15,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio",
+    "question": "In una gara stroke play Ivana piazza la sua palla quando la regola prescrive che sia droppata.\r\nPrima di giocare Ivana corregge l'errore droppando correttamente",
+    "image": null,
+    "answers": [
+      {
+        "text": "la palla è in gioco, quindi Ivana incorre in un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "Ivana incorre nella penalità generale di due colpi di penalità",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "14_5a"
+      }
+    ],
+    "referenceText": "Controlla la regola 14.5a"
+  },
+  {
+    "id": 16,
+    "section": "Il gioco in generale",
+    "level": "Difficile",
+    "question": "In una gara stroke-play Patrizio, alza la sua palla sul fairway, poi si accorge che la sua azione è contro le regole, quindi decide di riposizionare la palla.\nE' in dubbio sulla procedura, ma la droppa il più vicino possibile a dove giaceva originariamente e la gioca.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Patrizio incorre nella penalità generale di due colpi",
+        "correct": true
+      },
+      {
+        "text": "Patrizio incorre in un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "Patrizio incorre in tre colpi di penalità avendo infranto due regole",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "9_4a"
+      },
+      {
+        "type": "Regole",
+        "ref": "9_4b"
+      },
+      {
+        "type": "Regole",
+        "ref": "1_3c(4)"
+      },
+      {
+        "type": "Regole",
+        "ref": "14_7a"
+      }
+    ],
+    "referenceText": "Controlla la regola 9.4a e 9.4b , la regola 1.3c(4) e la regola 14.7a"
+  },
+  {
+    "id": 17,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio",
+    "question": "Filippo, guardando il volo della palla ritiene sia diventata inservibile al gioco, ma non può accertarsene in quanto la palla è coperta di fango. La palla però giace in un terreno in riparazione (TR), Filippo la alza e la pulisce e quindi determina che la palla è inservibile al gioco. Quindi la sostituisce e droppa per il TR",
+    "image": null,
+    "answers": [
+      {
+        "text": "Filippo incorre nella penalità generale di due colpi",
+        "correct": false
+      },
+      {
+        "text": "Filippo incorre in un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "4_2c"
+      },
+      {
+        "type": "Regole",
+        "ref": "14_1c"
+      }
+    ],
+    "referenceText": "Controlla la regola 4.2c e 14.1c"
+  },
+  {
+    "id": 18,
+    "section": "Definizioni/Situazioni in cui ovviare e procedure",
+    "level": "Medio/Facile",
+    "question": "La palla di un giocatore tocca la linea che definisce il bordo di un'area di penalità. La palla quindi è nell'area di penalità.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/paletto_oal_e_palla.jpg",
+      "file": "paletto_oal_e_palla.jpg"
+    },
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": true
+      },
+      {
+        "text": "Falso",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Area_di_Penalit&agrave;"
+      },
+      {
+        "type": "Regole",
+        "ref": "17_1a"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Area di Penalità' e la regola 17.1a"
+  },
+  {
+    "id": 19,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Difficile",
+    "question": "Orietta trova la sua palla nel bunker che è però completamente coperto da acqua piovana.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/bunker-acqua.jpg",
+      "file": "bunker-acqua.jpg"
+    },
+    "answers": [
+      {
+        "text": "Orietta può droppare la palla dentro al bunker, senza penalità, anche trovando una posizione in cui c'è acqua meno profonda",
+        "correct": true
+      },
+      {
+        "text": "Orietta può soltanto dichiarare la palla ingiocabile",
+        "correct": false
+      },
+      {
+        "text": "In questo caso Orietta può droppare la palla fuori dal bunker senza penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "16_1c(1)"
+      }
+    ],
+    "referenceText": "Controlla la regola 16.1c(1)"
+  },
+  {
+    "id": 20,
+    "section": "Il gioco in generale",
+    "level": "Medio/Difficile",
+    "question": "Un giocatore che utilizza un dispositivo di mobilità assistita può avere un solo assistente alla volta",
+    "image": null,
+    "answers": [
+      {
+        "text": "Falso",
+        "correct": false
+      },
+      {
+        "text": "Vero",
+        "correct": true
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "25_4c"
+      }
+    ],
+    "referenceText": "Controlla la regola 25.4c"
+  },
+  {
+    "id": 21,
+    "section": "Il gioco in generale",
+    "level": "Medio/Difficile",
+    "question": "Marina si appresta ad iniziare il giro e chiede alla sua amica Marta, che ha appena concluso il gioco, diversi consigli sui ferri utilizzati alle varie buche e sulla migliore tattica di gioco.\nMarta le da tutte le indicazioni richieste.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Marina e Marta incorrono nella penalità generale di due colpi di penalità",
+        "correct": false
+      },
+      {
+        "text": "Marina incorre nella penalità generale di due colpi di penalità",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "10_2a"
+      }
+    ],
+    "referenceText": "Controlla la regola 10.2a"
+  },
+  {
+    "id": 22,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "Sul green, Maria Teresa rimuove la rugiada sulla linea di gioco.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Maria Teresa incorre nella penalità generale",
+        "correct": true
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": false
+      },
+      {
+        "text": "Maria Teresa incorre in un colpo di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Impedimento_Sciolto"
+      },
+      {
+        "type": "Regole",
+        "ref": "8_1a(5)"
+      },
+      {
+        "type": "Regole",
+        "ref": "13_1c"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Impedimento Sciolto' , la regola 8.1a(5) e 13.1c"
+  },
+  {
+    "id": 23,
+    "section": "Il gioco in generale",
+    "level": "Facile",
+    "question": "In una gara stroke play, Susanna e Bianca alla buca 18 , per risparmiare tempo, si accordano per giocare fuori turno (chi è pronto tira).",
+    "image": null,
+    "answers": [
+      {
+        "text": "Susanna e Bianca incorrono ognuno nella penalità generale di due colpi di penalità",
+        "correct": false
+      },
+      {
+        "text": "Susanna e Bianca sono squalificati per essersi accordati per non applicare le Regole",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "5_6b(2)"
+      },
+      {
+        "type": "Regole",
+        "ref": "6_4b(2)"
+      }
+    ],
+    "referenceText": "Controlla la regola 5.6b(2) e 6.4b(2)"
+  },
+  {
+    "id": 24,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Facile",
+    "question": "In una gara stroke play foursome, Francesco e Tommy sono partner.\nFrancesco gioca il primo colpo dall'area di partenza e c'è il dubbio che la palla possa essere fuori limite, quindi decidono di giocare una palla provvisoria.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/francesco_tommy.jpg",
+      "file": "francesco_tommy.jpg"
+    },
+    "answers": [
+      {
+        "text": "In una gara stroke play foursome la palla provvisoria non può essere giocata.",
+        "correct": false
+      },
+      {
+        "text": "La palla provvisoria deve essere giocata da Francesco .",
+        "correct": false
+      },
+      {
+        "text": "La palla provvisoria deve essere giocata da Tommy.",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "22_3"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "22.3/4"
+      }
+    ],
+    "referenceText": "Verifica la regola 22.3 e il chiarimento 22.3/4"
+  },
+  {
+    "id": 25,
+    "section": "Definizioni",
+    "level": "Medio/Difficile",
+    "question": "Per determinare il punto più vicino dove ovviare Alberto può usare indifferentemente uno dei bastoni che ha nella sacca",
+    "image": null,
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": false
+      },
+      {
+        "text": "Falso",
+        "correct": true
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Punto_Più_Vicino_Dove_Ovviare_Completamente"
+      }
+    ],
+    "referenceText": "Rileggi la definizione di 'Punto Più Vicino Dove Ovviare Completamente'"
+  },
+  {
+    "id": 26,
+    "section": "Definizioni",
+    "level": "Medio/Difficile",
+    "question": "In un campo di nove buche, il Comitato posiziona due buche su ogni green da usare: una durante il gioco delle prime nove buche e l'altra durante il gioco delle seconde nove. La buca che non si sta giocando è considerata terreno in riparazione",
+    "image": null,
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": true
+      },
+      {
+        "text": "Falso",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Terreno_in_Riparazione"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Terreno in Riparazione'"
+  },
+  {
+    "id": 27,
+    "section": "Il gioco in generale",
+    "level": "Medio",
+    "question": "Anna supporta la sua palla dentro l'area di partenza; gioca un colpo ma manca la palla.\r\nAddressa di nuovo la palla e la fa cadere accidentalmente dal tee",
+    "image": null,
+    "answers": [
+      {
+        "text": "Anna può ripiazzare la palla senza penalità tirando il secondo colpo",
+        "correct": true
+      },
+      {
+        "text": "Anna ha mosso la palla che era in gioco, la deve ripiazzare con un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "Anna ha mosso la palla che era in gioco, deve giocare la palla come si trova con un colpo di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "6_2b(6)"
+      }
+    ],
+    "referenceText": "Controlla la regola 6.2b(6)"
+  },
+  {
+    "id": 28,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Difficile",
+    "question": "Marina ha la sua palla sul green, ma tra la palla e la buca c'è una pozza d'acqua temporanea. Marina decide di ovviare all'interferenza con l'acqua, ma il punto più vicino dove ovviare si trova fuori dal green, nell'area generale",
+    "image": null,
+    "answers": [
+      {
+        "text": "Marina essendo fuori dal green deve droppare la palla senza penalità",
+        "correct": false
+      },
+      {
+        "text": "il punto più vicino dove ovviare deve trovarsi obbligatoriamente sul green",
+        "correct": false
+      },
+      {
+        "text": "Marina deve piazzare la palla fuori dal green, nell'area generale senza penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "16_1d"
+      }
+    ],
+    "referenceText": "Controlla la regola 16.1d"
+  },
+  {
+    "id": 29,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Difficile",
+    "question": "Durante una gara, nonostante già altri giocatori abbiano giocato quella buca, Marco richiede l'intervento del Comitato poichè la sua palla è subito dietro al green in un'area dilavata che a suo avviso dovrebbe essere considerata Terreno in Riparazione (TR) .",
+    "image": null,
+    "answers": [
+      {
+        "text": "A gara iniziata il Comitato non può più intervenire",
+        "correct": false
+      },
+      {
+        "text": "Il Comitato può dichiarare l'area terreno in riparazione, delimitandola con paletti o linee a terra",
+        "correct": true
+      },
+      {
+        "text": "Il Comitato può dichiarare l'area come TR soltanto se nessun giocatore precedentemente ha giocato da quell'area",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [],
+    "referenceText": "Controlla le Procedure del Comitato sezione 6B (1)"
+  },
+  {
+    "id": 30,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Facile",
+    "question": "Un giocatore la cui palla si trova sul green può spazzolare residui di sabbia sulla linea di gioco utilizzando un cappello o un guanto",
+    "image": null,
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": true
+      },
+      {
+        "text": "Falso",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "13_1c(1)"
+      }
+    ],
+    "referenceText": "Controlla la Regola 13.1c(1)"
+  },
+  {
+    "id": 31,
+    "section": "Definizioni",
+    "level": "Facile",
+    "question": "Romeo imbuca un corto putt, ma nella buca giaceva la palla di Giulietta che aveva tirato prima di lui",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Romeo deve aggiungere due colpi di penalità al punteggio della buca",
+        "correct": false
+      },
+      {
+        "text": "Romeo deve ripetere il colpo senza penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Palla_Imbucata"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Palla Imbucata'"
+  },
+  {
+    "id": 32,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Facile",
+    "question": "Elisa trova la sua palla, nell'area generale, attaccata a del terreno smosso da una talpa (foto).",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/palla_terreno_di_talpa.jpg",
+      "file": "palla_terreno_di_talpa.jpg"
+    },
+    "answers": [
+      {
+        "text": "Elisa deve droppare la palla, entro due bastoni, aggiungendo un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "Elisa può droppare la palla, entro due bastoni, senza penalità",
+        "correct": false
+      },
+      {
+        "text": "Elisa può droppare la palla senza penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "2_3"
+      },
+      {
+        "type": "Regole",
+        "ref": "16_1"
+      }
+    ],
+    "referenceText": "Controlla la regola  2.3 e 16.1"
+  },
+  {
+    "id": 33,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio/Facile",
+    "question": "Rita concede all'avversario il suo colpo successivo, poi raccoglie la palla dell'avversario e con l'intenzione di restituirgliela, la tira verso di lui con il bastone.\r\nRita fa questo solamente per gentilezza, non per provare la superficie del green",
+    "image": null,
+    "answers": [
+      {
+        "text": "Rita perde la buca",
+        "correct": false
+      },
+      {
+        "text": "Rita ha una penalità di due colpi",
+        "correct": false
+      },
+      {
+        "text": "non c'è penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "13_1e"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "13.1e/1"
+      }
+    ],
+    "referenceText": "Controlla la regola 13.1e e il chiarimento 13.1e/1"
+  },
+  {
+    "id": 34,
+    "section": "Il gioco in generale/Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Facile",
+    "question": "Il Comitato di gara può emanare una linea di condotta per la velocità di gioco.\nI concorrenti possono essere penalizzati se infrangono dette regole",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/chiocciola.jpg",
+      "file": "chiocciola.jpg"
+    },
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": true
+      },
+      {
+        "text": "Falso",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "25"
+      }
+    ],
+    "referenceText": "Controlla la regola 5.6b(3). Verifica anche la regola 25 per i giocatori con disabilità"
+  },
+  {
+    "id": 35,
+    "section": "Il gioco in generale",
+    "level": "Medio/Difficile",
+    "question": "Giuseppe rimuove un paletto che definisce il fuori limite che si trova proprio sulla sua linea di gioco.\nEgli poi si rende conto di aver fatto un errore e lo rimette a posto prima di giocare il colpo successivo",
+    "image": null,
+    "answers": [
+      {
+        "text": "non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "il giocatore ha una penalità di un colpo, in quanto ha ripristinato la situazione",
+        "correct": false
+      },
+      {
+        "text": "il giocatore ha una penalità di due colpi",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "8_1a(1)"
+      },
+      {
+        "type": "Regole",
+        "ref": "8_1c(1)"
+      }
+    ],
+    "referenceText": "Controlla la regola 8.1a(1) e 8.1c(1)"
+  },
+  {
+    "id": 36,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Difficile",
+    "question": "Elisa considera la sua palla, che giace nell'area generale, ingiocabile e droppa entro due bastoni da dove la palla giace.\nNel fare ciò Elisa droppa volutamente la palla sulla sponda dell'adiacente lago (area di penalità)",
+    "image": null,
+    "answers": [
+      {
+        "text": "La palla deve essere ridroppata nell'area generale",
+        "correct": false
+      },
+      {
+        "text": "la procedura è corretta",
+        "correct": true
+      },
+      {
+        "text": "Se droppa nella sponda del lago, si applica la regola dell'area di penalità ed Elisa deve aggiungere un colpo di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "19_2c"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "19.2/2"
+      }
+    ],
+    "referenceText": "Controlla la regola 19.2c e il chiarimento 19.2/2"
+  },
+  {
+    "id": 37,
+    "section": "Definizioni",
+    "level": "Facile",
+    "question": "Una mela parzialmente mangiata è un'ostruzione",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/mela-mangiata.jpg",
+      "file": "mela-mangiata.jpg"
+    },
+    "answers": [
+      {
+        "text": "Essendo parzialmente mangiata è un'ostruzione movibile",
+        "correct": false
+      },
+      {
+        "text": "La mela è un impedimento sciolto solo se giace vicino ad un albero di mele",
+        "correct": false
+      },
+      {
+        "text": "La mela è un oggetto naturale, quando è staccata dall'albero è un impedimento sciolto",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Impedimento_Sciolto"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Impedimento_Sciolto/1"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Impedimento Sciolto' e il chiarimento 'Impedimento Sciolto/1' – Status di un Frutto"
+  },
+  {
+    "id": 38,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio",
+    "question": "Alessio, marca la palla e la alza senza pulirla.\r\nTrova un bel taglio sulla sua palla (foto), e ritenendola tagliata la sostituisce.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/palla_inservibile.jpg",
+      "file": "palla_inservibile.jpg"
+    },
+    "answers": [
+      {
+        "text": "Alessio incorre in un colpo di penalità in quanto non ha rispettato la procedura prevista",
+        "correct": false
+      },
+      {
+        "text": "Alessio deve essere autorizzato dal marcatore, incorre nella penalità generale",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità, se la palla è tagliata Alessio può sostituirla",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "4_2c(1)"
+      },
+      {
+        "type": "Regole",
+        "ref": "4_2c(2)"
+      }
+    ],
+    "referenceText": "Controlla la regola 4.2c(1) e 4.2c(2)"
+  },
+  {
+    "id": 39,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Difficile",
+    "question": "In una gara stroke-play la buca è completamente circondata da acqua piovana ed il Comitato non è in grado di rimuovere l'acqua.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/buca-acqua.jpg",
+      "file": "buca-acqua.jpg"
+    },
+    "answers": [
+      {
+        "text": "I giocatori debbono asciugare l'acqua prima di fare il colpo",
+        "correct": false
+      },
+      {
+        "text": "La buca deve essere riposizionata in una zona asciutta",
+        "correct": false
+      },
+      {
+        "text": "Il Comitato dovrebbe sospendere la gara",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "5_7"
+      }
+    ],
+    "referenceText": "Controlla la Procedura 6E (2) e 6E (6) oltre alla regola 5.7"
+  },
+  {
+    "id": 40,
+    "section": "Il gioco in generale",
+    "level": "Medio",
+    "question": "Prima di effettuare il colpo dall'area di partenza Erika strappa dell'erba immediatamente dietro alla palla",
+    "image": null,
+    "answers": [
+      {
+        "text": "Erika incorre in un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Erika incorre nella penalità generale (due colpi)",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "6_2b(3)"
+      }
+    ],
+    "referenceText": "Controlla la regola 6.2b(3)"
+  },
+  {
+    "id": 41,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "il giocatore dovrebbe eseguire il colpo in non più di 40 secondi da quando è possibile tirare",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/40secondi.jpg",
+      "file": "40secondi.jpg"
+    },
+    "answers": [
+      {
+        "text": "Falso",
+        "correct": false
+      },
+      {
+        "text": "Vero",
+        "correct": true
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "5_6b(1)"
+      }
+    ],
+    "referenceText": "Controlla la regola 5.6b(1)"
+  },
+  {
+    "id": 42,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Difficile",
+    "question": "In una gara stroke play foursome, Miriam e Massimiliano sono partner.\nMiriam deve droppare la palla che è andata nel lago, ma Massimiliano sarebbe già pronto per aiutarla e procedere al droppaggio.",
+    "image": null,
+    "answers": [
+      {
+        "text": "La palla può essere droppata indifferentemente da Miriam o da Massimiliano.",
+        "correct": true
+      },
+      {
+        "text": "La palla deve essere droppata da Massimiliano.",
+        "correct": false
+      },
+      {
+        "text": "La palla deve essere droppata da Miriam, in quanto solo il giocatore può eseguire il droppaggio",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Foursome"
+      },
+      {
+        "type": "Regole",
+        "ref": "22_2"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Foursome' e la regola 22.2"
+  },
+  {
+    "id": 43,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio/Difficile",
+    "question": "La palla di Fabiana è sporca di fango e con lo scopo di pulirla Fabiana la strofina sul green",
+    "image": null,
+    "answers": [
+      {
+        "text": "Fabiana ha una penalità di un colpo",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Fabiana incorre nella penalità generale (due colpi)",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "13_1e"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "13.1e/1"
+      }
+    ],
+    "referenceText": "Controlla la regola 13.1e e il chiarimento 13.1e/1"
+  },
+  {
+    "id": 44,
+    "section": "Definizioni",
+    "level": "Medio/Facile",
+    "question": "La rete metallica che definisce il fuori limite è un'ostruzione inamovibile",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/rete-out.jpg",
+      "file": "rete-out.jpg"
+    },
+    "answers": [
+      {
+        "text": "Falso",
+        "correct": true
+      },
+      {
+        "text": "Vero",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Oggetto_che_Definisce_il_Limite"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Ostruzione"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Oggetto che Definisce il Limite' e la definizione di 'Ostruzione'"
+  },
+  {
+    "id": 45,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "Una pozza d'acqua si trova sul green tra la palla di Rocco, che giace poco fuori dal green, e la buca.\r\nIn una gara stroke play, il caddie asciuga l'acqua",
+    "image": null,
+    "answers": [
+      {
+        "text": "Rocco incorre nella penalità generale di due colpi",
+        "correct": true
+      },
+      {
+        "text": "Rocco ha la penalità di un colpo",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità in quanto la palla non è sul green",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "8_1a(5)"
+      }
+    ],
+    "referenceText": "Controlla la regola 8.1a(5)"
+  },
+  {
+    "id": 46,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio",
+    "question": "Prima di droppare la palla secondo una regola, nell'area generale, Olga rimuove diversi impedimenti sciolti nell'area in cui sta per andare a droppare.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Olga deve riposizionare gli impedimenti sciolti prima di droppare, altrimenti incorre in penalità",
+        "correct": false
+      },
+      {
+        "text": "Olga incorre in due colpi di penalità, non può modificare l'area in cui si accinge a droppare",
+        "correct": false
+      },
+      {
+        "text": "Olga può rimuovere gli impedimenti sciolti",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "14_3"
+      },
+      {
+        "type": "Regole",
+        "ref": "15_1"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "15.1a/1"
+      }
+    ],
+    "referenceText": "Controlla la regola 14.3 e 15.1 e il chiarimento 15.1a/1"
+  },
+  {
+    "id": 47,
+    "section": "Seleziona Argomento",
+    "level": "Medio/Facile",
+    "question": "In una gara stroke play Filippo, con l'intenzione di farsi sentire da Mario, dichiara di aver giocato il ferro 7 mentre ha effettivamente giocato un ferro 5.\nMario deve giocare circa dalla sua stessa posizione.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità.",
+        "correct": false
+      },
+      {
+        "text": "Filippo incorre in penalità se Mario gioca il ferro 5.",
+        "correct": false
+      },
+      {
+        "text": "Filippo incorre nella penalità generale di due colpi",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "10_2a"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Consiglio"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Consiglio/1"
+      }
+    ],
+    "referenceText": "Controlla la regola 10.2a , la definizione di 'Consiglio' e il chiarimento 'Consiglio/1'"
+  },
+  {
+    "id": 48,
+    "section": "Definizioni",
+    "level": "Facile",
+    "question": "Il giocatore nella foto sta droppando correttamente",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/droppare-2019.jpg",
+      "file": "droppare-2019.jpg"
+    },
+    "answers": [
+      {
+        "text": "Falso",
+        "correct": false
+      },
+      {
+        "text": "Vero",
+        "correct": true
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Droppare"
+      },
+      {
+        "type": "Regole",
+        "ref": "25"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Droppare' e la regola 25 per i giocatori con disabilità."
+  },
+  {
+    "id": 49,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Difficile",
+    "question": "Giangiacomo, inizia il gioco con 14 bastoni, ma porta nella sacca anche un bastone che si era rotto in più pezzi precedentemente.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Giangiacomo incorre nella penalità generale di due colpi",
+        "correct": false
+      },
+      {
+        "text": "Giangiacomo incorre in un colpo di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "4_1b(1)"
+      }
+    ],
+    "referenceText": "Controlla la regola 4.1b(1)"
+  },
+  {
+    "id": 50,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Facile",
+    "question": "Marco da accidentalmente un calcio ad una pigna, che rotola nel bunker dove giaceva anche la sua palla.\r\nEgli raccoglie la pigna che non interferisce con lo stance che intende prendere nè con l'area dello swing che intende fare.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Marco ha una penalità di due colpi o perdita della buca in match-play",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Marco ha una penalità soltanto se la pigna era vicina alla palla",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "12_2a"
+      },
+      {
+        "type": "Regole",
+        "ref": "15_1"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Impedimento_Sciolto"
+      }
+    ],
+    "referenceText": "Controlla la regola 12.2a e 15.1 e la definizione di 'Impedimento Sciolto'"
+  },
+  {
+    "id": 51,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio",
+    "question": "Tiziano trova la sua palla tra i rami di un albero a circa due metri da terra.\r\nDecide di dichiararla ingiocabile scegliendo di dropparla entro due bastoni da dove giace.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/palla_albero.jpg",
+      "file": "palla_albero.jpg"
+    },
+    "answers": [
+      {
+        "text": "Tiziano non può dichiarare la palla ingiocabile poichè non è sul campo",
+        "correct": false
+      },
+      {
+        "text": "Tiziano deve misurare i due bastoni dal punto sul terreno immediatamente sotto la palla",
+        "correct": true
+      },
+      {
+        "text": "Tiziano deve misurare i due bastoni dal punto in cui la palla giace (albero)",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "19_2c"
+      }
+    ],
+    "referenceText": "Controlla la regola 19.2c"
+  },
+  {
+    "id": 52,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "In una gara stroke play Anna guarda nella sacca di Mara per determinare quale bastone è stato usato da Mara per il suo ultimo colpo.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Anna incorre nella penalità generale di due colpi",
+        "correct": false
+      },
+      {
+        "text": "Anna non incorre in penalità in quanto le informazioni ottenute osservando, non sono considerate consigli.",
+        "correct": true
+      },
+      {
+        "text": "Anna incorre in un colpo di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "10_2a"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Consiglio/2"
+      }
+    ],
+    "referenceText": "Verifica la regola 10.2a e il chiarimento 'Consiglio/2' – Commenti verbali o Azioni che non costituiscono consiglio"
+  },
+  {
+    "id": 53,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio/Facile",
+    "question": "Angelo ripara i danni causati al green dalle scarpe (segni dei chiodi ad esempio) sia quando la sua palla giace sul green sia quando è sul collar, ma sulla linea di gioco",
+    "image": null,
+    "answers": [
+      {
+        "text": "Angelo incorre nella penalità generale di due colpi",
+        "correct": false
+      },
+      {
+        "text": "Angelo incorre nella penalità generale di due colpi solo se i danni riparati sono sulla sua linea di gioco",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "13_1c(2)"
+      }
+    ],
+    "referenceText": "Controlla la regola 13.1c(2)"
+  },
+  {
+    "id": 54,
+    "section": "Il gioco in generale",
+    "level": "Medio",
+    "question": "Marco, la cui palla si trova in un'area di penalità, rimuove un impedimento sciolto nella stessa area. Marco poi decide di droppare una palla fuori dall'area di penalità con un colpo di penalità secondo la Regola specifica",
+    "image": null,
+    "answers": [
+      {
+        "text": "Marco avrebbe penalità soltanto se giocasse la palla dall'area di penalità",
+        "correct": false
+      },
+      {
+        "text": "Marco ha una penalità di due colpi o la perdita della buca in match-play",
+        "correct": false
+      },
+      {
+        "text": "L'azione di rimuovere l'impedimento sciolto non comporta penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "15_1a"
+      }
+    ],
+    "referenceText": "Controlla la regola 15.1a"
+  },
+  {
+    "id": 55,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Difficile",
+    "question": "Giulio esegue il primo colpo dalla partenza della buca 4 e la sua palla si apre verso destra. Egli si avvia verso la palla, ma dopo una trentina di metri vede che la palla potrebbe essere persa in mezzo ad alcuni cespugli, quindi torna velocemente indietro e gioca una palla provvisoria",
+    "image": null,
+    "answers": [
+      {
+        "text": "la procedura è corretta",
+        "correct": true
+      },
+      {
+        "text": "Giulio non può giocare una palla provvisoria in quanto è già andato avanti per la ricerca",
+        "correct": false
+      },
+      {
+        "text": "La palla che Giulio ha dichiarato come provvisoria è la palla in gioco",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "18_3a"
+      }
+    ],
+    "referenceText": "Controlla la regola 18.3a"
+  },
+  {
+    "id": 56,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio/Facile",
+    "question": "Bruno rimuove l'asta della bandiera con una mano e imbuca un putt corto impugnando il putter con l'altra mano.\r\nLa palla non tocca l'asta che Bruno ha rimosso",
+    "image": null,
+    "answers": [
+      {
+        "text": "Bruno incorre nella penalità generale di due colpi",
+        "correct": false
+      },
+      {
+        "text": "Bruno incorre in un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "13_2b(1)"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "13.2b(1)/1"
+      }
+    ],
+    "referenceText": "Controlla la regola 13.2b(1) e il chiarimento 13.2b(1)/1"
+  },
+  {
+    "id": 57,
+    "section": "Definizioni/Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Difficile",
+    "question": "Una gara prevede che il punteggio di un giocatore per una buca è limitato ad un numero massimo di colpi stabiliti dal Comitato",
+    "image": null,
+    "answers": [
+      {
+        "text": "La gara non è contemplata dalle regole, come la Louisiana o la Greensome",
+        "correct": false
+      },
+      {
+        "text": "La gara cosiddetta 'Risultato massimo' è una forma di stroke-play",
+        "correct": true
+      },
+      {
+        "text": "La gara non è una stroke-play",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "21_2"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Risultato_Massimo"
+      }
+    ],
+    "referenceText": "Controlla la regola 21.2 e la definizione di 'Risultato Massimo'"
+  },
+  {
+    "id": 58,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "Tiger gioca un colpo da mancino con la parte posteriore della testa di un bastone da destro.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/colpo-da-mancino.jpg",
+      "file": "colpo-da-mancino.jpg"
+    },
+    "answers": [
+      {
+        "text": "Tiger incorre nella penalità generale di due colpi",
+        "correct": false
+      },
+      {
+        "text": "non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Tiger deve ripetere il colpo, altrimenti incorre in due colpi di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "10_1a"
+      }
+    ],
+    "referenceText": "Controlla la regola 10.1a"
+  },
+  {
+    "id": 59,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Difficile",
+    "question": "Sara droppa due volte la sua palla, che era in un terreno in riparazione, ed ogni volta la palla rotola più vicino alla buca.\nSara droppa la terza volta e la palla si ferma in una posizione corretta, ma distante da dove aveva toccato terra precedentemente.\r\nSara effettua allora il suo colpo",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità",
+        "correct": false
+      },
+      {
+        "text": "Sara incorre in due colpi di penalità",
+        "correct": true
+      },
+      {
+        "text": "Sara incorre nella penalità di tre colpi",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "14_3c(2)"
+      },
+      {
+        "type": "Regole",
+        "ref": "14_2b"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "14.2b(2)/1"
+      }
+    ],
+    "referenceText": "Controlla la regola 14.3c(2) e 14.2b e il chiarimento 14.2b(2)/1"
+  },
+  {
+    "id": 60,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "Senza ritardare ingiustificatamente il gioco, il caddie di Agnese prende uno dei suoi bastoni ed esegue un movimento per mostrargli come giocare il colpo.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Agnese incorre in un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Agnese incorre in due colpi di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "10_3b"
+      }
+    ],
+    "referenceText": "Controlla la regola 10.3b"
+  },
+  {
+    "id": 61,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio/Difficile",
+    "question": "La palla di Sergio è appoggiata contro l'asta della bandiera, ma è solo in parte al di sotto dell'orlo della buca.\r\nTuttavia Sergio, credendo che la palla sia imbucata, la raccoglie",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/palla_e_asta.jpg",
+      "file": "palla_e_asta.jpg"
+    },
+    "answers": [
+      {
+        "text": "Sergio incorre in un colpo di penalità e deve ripiazzare la palla contro l'asta",
+        "correct": false
+      },
+      {
+        "text": "Sergio incorre in due colpi di penalità",
+        "correct": false
+      },
+      {
+        "text": "non c'è penalità in quanto la palla è imbucata",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "13_2c"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Palla_Imbucata"
+      }
+    ],
+    "referenceText": "Controlla la regola 13.2c e la definizione di 'Palla Imbucata'"
+  },
+  {
+    "id": 62,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "Marco Valerio gioca il giro senza aver messo un segno di identificazione sulla sua palla.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/palla segnata2.JPG",
+      "file": "palla-segnata2.JPG"
+    },
+    "answers": [
+      {
+        "text": "Marco Valerio incorre in due colpi di penalità",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Marco Valerio incorre in un colpo di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "6_3a"
+      },
+      {
+        "type": "Regole",
+        "ref": "7_2"
+      }
+    ],
+    "referenceText": "Le regole invitano il giocatore a mettere un segno d'identificazione sulla sua palla , ma non c'è un obbligo. Controlla la regola 6.3a e 7.2"
+  },
+  {
+    "id": 63,
+    "section": "Definizioni/Situazioni in cui ovviare e procedure",
+    "level": "Medio",
+    "question": "Milvia deve misurare la lunghezza di un bastone, prima di droppare per una determinata regola. Per velocizzare la procedura prende in prestito da un compagno di gioco il driver, che casualmente è identico al suo. Misura, droppa e gioca",
+    "image": null,
+    "answers": [
+      {
+        "text": "Milvia incorre in due colpi di penalità in quanto non si posso prendere in prestito bastoni durante il gioco",
+        "correct": false
+      },
+      {
+        "text": "Milvia incorre in un colpo di penalità per un errore di procedura",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Lunghezza_del_Bastone"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Lunghezza del Bastone'"
+  },
+  {
+    "id": 64,
+    "section": "Definizioni",
+    "level": "Medio/Facile",
+    "question": "Gli impedimenti sciolti non sono parte del lie di una palla",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/palla_su_foglia.jpg",
+      "file": "palla_su_foglia.jpg"
+    },
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": true
+      },
+      {
+        "text": "Falso",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Lie"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Lie'"
+  },
+  {
+    "id": 65,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio/Difficile",
+    "question": "Teresa chiede a Marta, sua compagna di gioco, di custodire l'asta della bandiera mentre lei effettua un lungo putt dal green. Marta però si distrae e non rimuove l'asta che viene colpita dal colpo eseguito da Teresa.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità, la palla deve essere giocata da dove si trova",
+        "correct": true
+      },
+      {
+        "text": "Teresa incorre in due colpi di penalità",
+        "correct": false
+      },
+      {
+        "text": "Teresa deve ripetere il colpo",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "13_2b(2)"
+      }
+    ],
+    "referenceText": "Controlla la regola 13.2b(2)"
+  },
+  {
+    "id": 66,
+    "section": "Il gioco in generale",
+    "level": "Difficile",
+    "question": "Carlo Augusto interrompe la ricerca della sua palla per far passare il gruppo che è dietro al suo.\r\nMentre stà camminando per spostarsi di lato, accidentalmente muove la sua palla che era nel rough.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Carlo Augusto non ha penalità ma deve giocare la palla dalla nuova posizione",
+        "correct": false
+      },
+      {
+        "text": "Carlo Augusto non ha penalità e deve ripiazzare la palla",
+        "correct": true
+      },
+      {
+        "text": "Carlo Augusto ha un colpo di penalità per aver mosso la palla e deve ripiazzarla",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "9_4b"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "7.4/3"
+      }
+    ],
+    "referenceText": "Controlla la regola 9.4b eccezione 2 ed il chiarimento 7.4/3"
+  },
+  {
+    "id": 67,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Facile",
+    "question": "Claudio ha disegnato una riga rossa sulla sua palla.\r\nQuando ripiazza la palla la posiziona in modo da allineare questa riga rossa alla linea di gioco",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/palla_riga.jpg",
+      "file": "palla_riga.jpg"
+    },
+    "answers": [
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Claudio incorre in due colpi di penalità in quanto non si può avere un riferimento per la linea di gioco",
+        "correct": false
+      },
+      {
+        "text": "Claudio incorre in un colpo di penalità in quanto non si può avere un riferimento per la linea di gioco",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "14_2"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "14.2c/1"
+      }
+    ],
+    "referenceText": "Controlla la regola 14.2 e il chiarimento 14.2c/1"
+  },
+  {
+    "id": 68,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Difficile",
+    "question": "In una gara Foursome il Comitato può stabilire quale partner deve giocare dalla prima buca.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Falso",
+        "correct": false
+      },
+      {
+        "text": "Vero",
+        "correct": true
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "22_4a"
+      }
+    ],
+    "referenceText": "Controlla la regola 22.4a"
+  },
+  {
+    "id": 69,
+    "section": "Definizioni",
+    "level": "Medio/Facile",
+    "question": "Il Comitato di Gara può proibire il gioco in una parte del campo definendolo come 'Zona proibita al gioco'",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/zona-proibita-al-gioco.jpg",
+      "file": "zona-proibita-al-gioco.jpg"
+    },
+    "answers": [
+      {
+        "text": "Il Comitato può proibire il gioco in una parte del campo per preservare un'area del campo o per proteggere i giocatori da situazioni di pericolo o altro",
+        "correct": true
+      },
+      {
+        "text": "Il Comitato può proibire il gioco soltanto per tutelare siti di interesse storico culturale",
+        "correct": false
+      },
+      {
+        "text": "Il Comitato può proibire il gioco in una parte del campo solo se autorizzato da un'autorità competente (Ente Governativo o simile)",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Zona_Proibita_al_Gioco"
+      },
+      {
+        "type": "Regole",
+        "ref": "2_4"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Zona Proibita al Gioco' e la regola 2.4"
+  },
+  {
+    "id": 70,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio",
+    "question": "In una gara stableford Marisa per errore consegna lo score con il punteggio di 4 colpi alla buca 10 anzichè i 5 colpi giocati.\r\nA quella buca par 3 , Marisa riceveva 2 colpi.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Marisa è squalificata solo per quella buca",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità, a quella buca non sarebbero stati attribuiti punti",
+        "correct": false
+      },
+      {
+        "text": "Marisa è squalificata",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "3_3b(3)"
+      },
+      {
+        "type": "Regole",
+        "ref": "21_1c"
+      }
+    ],
+    "referenceText": "Controlla la regola 3.3b(3) e 21.1c"
+  },
+  {
+    "id": 71,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "Serena finita la buca 9 si ferma per svariati minuti in clubhouse per vedere gli ultimi scambi di una partita di calcio",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/ritardo.jpg",
+      "file": "ritardo.jpg"
+    },
+    "answers": [
+      {
+        "text": "Non c'è penalità",
+        "correct": false
+      },
+      {
+        "text": "Serena è squalificata",
+        "correct": false
+      },
+      {
+        "text": "Serena incorre in un colpo di penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "5_6a"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "5.6a/1"
+      }
+    ],
+    "referenceText": "Controlla la regola 5.6a e il chiarimento 5.6a/1"
+  },
+  {
+    "id": 72,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio/Facile",
+    "question": "In una gara stroke play Gianni scopre alla buca 8 di avere nella sacca 16 bastoni. Dichiara immediatamente i due bastoni in eccedenza fuori gioco.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Gianni incorre in quattro colpi di penalità",
+        "correct": true
+      },
+      {
+        "text": "Gianni viene penalizzato di quattro punti sul totale del giro",
+        "correct": false
+      },
+      {
+        "text": "Gianni ha nella sacca due bastoni di troppo, quindi incorre in otto colpi di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "4_1b(1)"
+      },
+      {
+        "type": "Regole",
+        "ref": "4_1c(1)"
+      }
+    ],
+    "referenceText": "Controlla la regola 4.1b(1) e la regola 4.1c(1)"
+  },
+  {
+    "id": 73,
+    "section": "Il gioco in generale/Il campo i bastoni e la palla",
+    "level": "Medio/Facile",
+    "question": "Massimo usa una bussola durante un giro per farsi aiutare a determinare la direzione del vento o la direzione della crescita dell'erba sul green o per altre ragioni simili.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/bussola.jpg",
+      "file": "bussola.jpg"
+    },
+    "answers": [
+      {
+        "text": "Se è in vigore una regola locale che ne permette l'uso non c'è penalità",
+        "correct": false
+      },
+      {
+        "text": "Massimo è squalificato",
+        "correct": false
+      },
+      {
+        "text": "non c'è penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "4_3a(1)"
+      }
+    ],
+    "referenceText": "Controlla la regola 4.3a(1)"
+  },
+  {
+    "id": 74,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Difficile",
+    "question": "Durante una gara stroke play, Carla trova la sua palla in un'area di penalità e decide di dichiararla ingiocabile.\nDroppa nell'area di penalità entro due bastoni e gioca la palla.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Quando la palla è in un'area di penalità non può essere dichiarata ingiocabile. Carla incorre in due colpi di penalità per aver giocato da un posto sbagliato.",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": false
+      },
+      {
+        "text": "Quando la palla è in un'area di penalità non può essere dichiarata ingiocabile. Carla incorre in un colpo di penalità per la regola dell'area di penalità e due colpi per aver giocato da un posto sbagliato. Tre colpi in totale.",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "14_7a"
+      },
+      {
+        "type": "Regole",
+        "ref": "19_1"
+      }
+    ],
+    "referenceText": "Controlla la regola 14.7a e la regola 19.1 e le Procedure per il Comitato capitolo 6C (8)"
+  },
+  {
+    "id": 75,
+    "section": "Definizioni",
+    "level": "Medio",
+    "question": "L’equipaggiamento include gli oggetti posizionati sul campo per la cura del campo, come i rastrelli, mentre essi sono tenuti o trasportati",
+    "image": null,
+    "answers": [
+      {
+        "text": "Falso",
+        "correct": false
+      },
+      {
+        "text": "Vero",
+        "correct": true
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Equipaggiamento"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Equipaggiamento'"
+  },
+  {
+    "id": 76,
+    "section": "Il gioco in generale",
+    "level": "Difficile",
+    "question": "Roberta esegue lo swing per fare un colpo e manca una palla sbagliata.",
+    "image": null,
+    "answers": [
+      {
+        "text": "non c'è penalità ed il colpo deve essere ripetuto",
+        "correct": false
+      },
+      {
+        "text": "Roberta ha una penalità di due colpi o la perdita della buca in match-play",
+        "correct": true
+      },
+      {
+        "text": "non c'è penalità ma il colpo fatto a vuoto conta",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "6_3c(1)"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Palla_Sbagliata"
+      }
+    ],
+    "referenceText": "Controlla la regola 6.3c(1) e la definizione di 'Palla Sbagliata'"
+  },
+  {
+    "id": 77,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Difficile",
+    "question": "Durante una gara stroke play, Giulio, per distrazione, piazza la sua palla in green vicino al suo marchino, ma in un posto sbagliato, poi gioca il putt.\r\nLa palla si ferma a trenta cm dalla buca.\r\nAvendo scoperto l'errore Giulio alza la palla, la posiziona correttamente dove era il suo marca palla e ripete il colpo terminando la buca.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Giulio incorre in quattro colpi di penalità.",
+        "correct": true
+      },
+      {
+        "text": "Giulio incorre in due colpi di penalità",
+        "correct": false
+      },
+      {
+        "text": "Giulio incorre in un colpo di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "14_7b(1)"
+      },
+      {
+        "type": "Regole",
+        "ref": "9_4"
+      }
+    ],
+    "referenceText": "Giulio ha giocato da un posto sbagliato , ma non era una grave infrazione. Controlla la regola 14.7b(1) e 9.4"
+  },
+  {
+    "id": 78,
+    "section": "Definizioni",
+    "level": "Medio/Facile",
+    "question": "La penalità generale consiste nella perdita della buca in match play o due colpi di penalità in stroke play",
+    "image": null,
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": true
+      },
+      {
+        "text": "Falso",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Penalità_Generale"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Penalità Generale'"
+  },
+  {
+    "id": 79,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Difficile",
+    "question": "In una gara su 72 buche a squadre, in cui contano due punteggi su tre, Alessandro viene squalificato per essere arrivato in ritardo alla partenza nella prima giornata.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Alessandro è squalificato e quindi non può giocare in nessuna giornata della gara",
+        "correct": false
+      },
+      {
+        "text": "Alessandro può giocare gli altri giri, la squalifica è valida solo per il primo giro",
+        "correct": true
+      },
+      {
+        "text": "Dipende dal Comitato decidere se la squalifica conta per l'intera gara",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Chiarimenti",
+        "ref": "1.3c/1"
+      }
+    ],
+    "referenceText": "Controlla il chiarimento 1.3c/1"
+  },
+  {
+    "id": 80,
+    "section": "Il gioco in generale",
+    "level": "Difficile",
+    "question": "Roberto marca la posizione della sua palla sul green, la alza e la mette da parte.\nPer errore, egli poi gioca il putt dal punto dove aveva posato la palla.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità perchè la palla non era in gioco ed il colpo deve essere ripetuto",
+        "correct": false
+      },
+      {
+        "text": "Roberto ha la penalità di un colpo",
+        "correct": false
+      },
+      {
+        "text": "Roberto ha una penalità di due colpi o la perdita della buca in match-play, in stroke play deve poi correggere l'errore",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "6_3c(1)"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "14.4/1"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Palla_Sbagliata"
+      }
+    ],
+    "referenceText": "Controlla la regola 6.3c(1) , il chiarimento 14.4/1 e la definizione di 'Palla Sbagliata'"
+  },
+  {
+    "id": 81,
+    "section": "Il gioco in generale",
+    "level": "Difficile",
+    "question": "Alberico esegue un lungo putt sul green e la sua palla si scontra con un rametto in movimento mosso dal vento.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Alberico incorre in un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità, il colpo deve essere ripetuto",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità, la palla si gioca da dove è andata a fermarsi",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "11_1a"
+      }
+    ],
+    "referenceText": "Controlla la regola 11.1a"
+  },
+  {
+    "id": 82,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio/Facile",
+    "question": "Giacomo decide di effettuare il colpo dal green lasciando l'asta della bandiera nella buca. Il suo colpo va in buca sfiorando l'asta.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Giacomo ha penalità soltanto se la palla cadendo in buca ha toccato l'asta",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità, la procedura è corretta",
+        "correct": true
+      },
+      {
+        "text": "Giacomo ha una penalità di due colpi o la perdita della buca in match-play",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "13_2a(2)"
+      }
+    ],
+    "referenceText": "Controlla la regola 13.2a(2)"
+  },
+  {
+    "id": 83,
+    "section": "Il gioco in generale",
+    "level": "Medio",
+    "question": "Carlo e Bruno si accorgono durante il gioco di una buca che stanno giocando con palle identiche.\r\nSapendo qual era la sua palla, Carlo per evitare successiva confusione alza la sua palla prima di giocare il suo secondo colpo, e la sostituisce con una con marcatura differente terminando la buca",
+    "image": null,
+    "answers": [
+      {
+        "text": "non c'è penalità",
+        "correct": false
+      },
+      {
+        "text": "Carlo ha una penalità di due colpi o la perdita della buca in match-play",
+        "correct": false
+      },
+      {
+        "text": "Carlo ha una penalità di un colpo per aver sostituito la palla",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "6_3b"
+      }
+    ],
+    "referenceText": "Controlla la regola 6.3b"
+  },
+  {
+    "id": 84,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Difficile",
+    "question": "Rolando spedisce la palla dentro l'area di penalità delimitata da una linea rossa, vicino al green. Droppa entro due bastoni dalla linea senza avvicinarsi alla buca e così facendo effettivamente va a droppare sul green. La palla rimane sul green, quindi esegue un bel colpo con il putt ed imbuca.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Rolando deve ridroppare la palla entro i due bastoni, ma non sul green",
+        "correct": false
+      },
+      {
+        "text": "Rolando incorre in due colpi di penalità in quanto sul green la palla deve essere piazzata",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità, la procedura è corretta",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "17_1d(3)"
+      }
+    ],
+    "referenceText": "Controlla la regola 17.1d(3)"
+  },
+  {
+    "id": 85,
+    "section": "Definizioni/Il gioco in generale",
+    "level": "Facile",
+    "question": "Il caddie è una persona che assiste il giocatore in conformità con le Regole, il che può comprendere il trasportare o l&rsquo;occuparsi dei bastoni del giocatore o dare consiglio durante il gioco.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/caddy.jpg",
+      "file": "caddy.jpg"
+    },
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": true
+      },
+      {
+        "text": "Falso",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Caddie"
+      },
+      {
+        "type": "Regole",
+        "ref": "10_3"
+      }
+    ],
+    "referenceText": "Verifica la definizione di 'Caddie' e la regola 10.3"
+  },
+  {
+    "id": 86,
+    "section": "Il gioco in generale",
+    "level": "Difficile",
+    "question": "In una gara stroke play, Marisa è in dubbio se il suo colpo sia entro i limiti del campo, quindi gioca una palla provvisoria. Arrivata sul posto trova tutte e due le palle ma non riesce a capire se la palla originaria sia entro i limiti del campo. Per questo Marisa completa la buca con ambedue le palle considerando la provvisoria come seconda palla giocata per dubbio sulla procedura",
+    "image": null,
+    "answers": [
+      {
+        "text": "La procedura adottata da Marisa è corretta",
+        "correct": true
+      },
+      {
+        "text": "Marisa incorre in due colpi di penalità",
+        "correct": false
+      },
+      {
+        "text": "Una volta trovata la palla originaria la provvisoria deve essere alzata",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "20_1c(3)"
+      },
+      {
+        "type": "Chiarimenti",
+        "ref": "20.1c(3)/6"
+      }
+    ],
+    "referenceText": "Controlla la regola 20.1c(3) e il chiarimento 20.1c(3)/6"
+  },
+  {
+    "id": 87,
+    "section": "Seleziona Argomento",
+    "level": "Medio/Facile",
+    "question": "I tappi di terra compatta che si formano dopo aver trattato i fairway per l'aerazione (carotatura) sono impedimenti sciolti.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": true
+      },
+      {
+        "text": "Falso",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Impedimento_Sciolto"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Impedimento Sciolto'"
+  },
+  {
+    "id": 88,
+    "section": "Il gioco in generale",
+    "level": "Difficile",
+    "question": "In una gara stroke-play Marcello, dopo aver effettuato un putt che rimane corto, imbuca la palla colpendola con il manico del suo putt.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Marcello deve ripetere il colpo",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": false
+      },
+      {
+        "text": "Marcello incorre in due colpi di penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "10_1a"
+      }
+    ],
+    "referenceText": "Controlla la regola 10.1a"
+  },
+  {
+    "id": 89,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "Il Comitato non può stabilire a sua discrezione l'ordine in cui le buche debbono essere giocate.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/tee-1-tee-10.jpg",
+      "file": "tee-1-tee-10.jpg"
+    },
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": false
+      },
+      {
+        "text": "Falso",
+        "correct": true
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "5_1"
+      },
+      {
+        "type": "Regole",
+        "ref": "18"
+      }
+    ],
+    "referenceText": "Controlla la regola 5.1 che dice Un giro è costituito da 18 buche o meno giocate nell'ordine stabilito dal Comitato"
+  },
+  {
+    "id": 90,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Facile",
+    "question": "Un ramo staccato da un albero giace fuori limite ed interferisce con lo stance di Federica.\r\nFederica sposta il ramo di mezzo metro ed esegue il colpo.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Federica è squalificata",
+        "correct": false
+      },
+      {
+        "text": "Federica incorre nella penalità di due colpi",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Impedimento_Sciolto"
+      },
+      {
+        "type": "Regole",
+        "ref": "15_1a"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Impedimento Sciolto' e la regola 15.1a"
+  },
+  {
+    "id": 91,
+    "section": "Il campo i bastoni e la palla",
+    "level": "Medio/Facile",
+    "question": "Maria ha iniziato il gioco con 14 bastoni. Dopo un brutto colpo lancia il bastone per rabbia e a seguito di ciò il bastone si rompe diventando inservibile al gioco.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Il bastone non è stato rotto nel normale svolgimento del gioco, quindi non può essere sostituito nè usato.",
+        "correct": false
+      },
+      {
+        "text": "Il bastone non può essere sostituito",
+        "correct": true
+      },
+      {
+        "text": "Il bastone può essere sostituito senza penalità e senza causare ritardo al gioco.",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "4_1a(2)"
+      }
+    ],
+    "referenceText": "Controlla la regola 4.1a(2)"
+  },
+  {
+    "id": 92,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "Maria Teresa effettua un colpo dall'area di partenza poggiando la palla su un'irregolarità del terreno che lei stessa ha creato con il ferro 5",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Maria Teresa incorre in un colpo di penalità",
+        "correct": false
+      },
+      {
+        "text": "Maria Teresa incorre in due colpi di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "6_2b(3)"
+      }
+    ],
+    "referenceText": "Controlla la regola 6.2b(3)"
+  },
+  {
+    "id": 93,
+    "section": "Definizioni",
+    "level": "Facile",
+    "question": "Una bottiglia di plastica abbandonata sul campo è :",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/bottiglia-plastica.jpg",
+      "file": "bottiglia-plastica.jpg"
+    },
+    "answers": [
+      {
+        "text": "un impedimento sciolto",
+        "correct": false
+      },
+      {
+        "text": "un'ostruzione movibile",
+        "correct": true
+      },
+      {
+        "text": "un'ostruzione inamovibile",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Ostruzione"
+      },
+      {
+        "type": "Definizioni",
+        "ref": "Ostruzione_Movibile"
+      },
+      {
+        "type": "Regole",
+        "ref": "15_2"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Ostruzione' e quella di 'Ostruzione Movibile' nonchè la regola 15.2"
+  },
+  {
+    "id": 94,
+    "section": "Il gioco in generale",
+    "level": "Medio",
+    "question": "In una gara stroke play, il caddie di Mario pratica sul campo prima che Mario cominci il giro.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Mario incorre in due colpi di penalità.",
+        "correct": false
+      },
+      {
+        "text": "Mario è squalificato.",
+        "correct": false
+      },
+      {
+        "text": "Non c'è penalità.",
+        "correct": true
+      }
+    ],
+    "correctIndex": 2,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "5_2"
+      }
+    ],
+    "referenceText": "Controlla la regola 5.2"
+  },
+  {
+    "id": 95,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "La palla di Mario giace nel rough dietro un grosso sasso, non infossato nel terreno.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Mario può rimuovere il sasso, che è un impedimento sciolto, anche con grande sforzo e con l'aiuto di altri, purchè non ritardi il gioco",
+        "correct": true
+      },
+      {
+        "text": "Mario può rimuovere il sasso, che è un impedimento sciolto, ma senza l'aiuto di altri e senza provocare danni al campo",
+        "correct": false
+      },
+      {
+        "text": "Mario non può rimuovere il sasso, in quanto per il suo volume non è un impedimento sciolto",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Impedimento_Sciolto"
+      }
+    ],
+    "referenceText": "Controlla la regola 15.a e la definizione di 'Impedimento Sciolto'"
+  },
+  {
+    "id": 96,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Difficile",
+    "question": "Niccolò spedisce la palla dentro al lago (delimitato da una linea rossa) che si trova vicino al green. Droppa entro due bastoni dalla linea, senza avvicinarsi alla buca e così facendo va a droppare sul green. La palla droppata cade sul green e rimbalza poi di pochi centimetri fuori dal green.",
+    "image": {
+      "url": "https://www.quizgolf.com/img/user/qa/acqua misura green.jpg",
+      "file": "acqua-misura-green.jpg"
+    },
+    "answers": [
+      {
+        "text": "la procedura è corretta Niccolò può giocare la palla",
+        "correct": false
+      },
+      {
+        "text": "Niccolò deve droppare nuovamente la palla",
+        "correct": true
+      },
+      {
+        "text": "Niccolò incorre in due colpi di penalità in quanto sul green la palla doveva essere piazzata",
+        "correct": false
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "17_1d(3)"
+      },
+      {
+        "type": "Regole",
+        "ref": "14_3c(1)"
+      }
+    ],
+    "referenceText": "Controlla la regola 17.1d(3) e la regola 14.3c(1)"
+  },
+  {
+    "id": 97,
+    "section": "Definizioni",
+    "level": "Medio",
+    "question": "Un ristagno d'acqua che si trovi in una parte asciutta di un'area di penalità è acqua temporanea",
+    "image": null,
+    "answers": [
+      {
+        "text": "Vero",
+        "correct": false
+      },
+      {
+        "text": "Falso",
+        "correct": true
+      }
+    ],
+    "correctIndex": 1,
+    "references": [
+      {
+        "type": "Definizioni",
+        "ref": "Acqua_Temporanea"
+      }
+    ],
+    "referenceText": "Controlla la definizione di 'Acqua Temporanea'"
+  },
+  {
+    "id": 98,
+    "section": "Il gioco in generale",
+    "level": "Medio/Facile",
+    "question": "In stroke play, Arnaldo ha la sua palla a pochi cm dalla buca, il suo compagno di gioco, Filippo, gli concede il colpo.\nArnaldo alza la palla e tira alla buca successiva.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Arnaldo deve essere squalificato poichè non ha imbucato ad una buca",
+        "correct": true
+      },
+      {
+        "text": "La procedura è corretta poichè il colpo può essere concesso",
+        "correct": false
+      },
+      {
+        "text": "Ambedue i giocatori debbono essere squalificati",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "3_3c"
+      }
+    ],
+    "referenceText": "Controlla la regola 3.3c"
+  },
+  {
+    "id": 99,
+    "section": "Situazioni in cui ovviare e procedure",
+    "level": "Medio/Facile",
+    "question": "La palla di Gianni si ferma nel rough, vicino al fairway, in una posizione in cui ha interferenza con un tombino metallico.\r\nGianni droppa la palla entro un bastone per la regola dell'ostruzione inamovibile, ma cosi facendo si trova a droppare nel fairway.\r\nGianni droppa e la palla rimane nel fairway dentro l'area in cui ovviare, quindi esegue il colpo",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Gianni doveva per forza rimanere nel rough, incorre nella penalità di un colpo",
+        "correct": false
+      },
+      {
+        "text": "Gianni doveva per forza rimanere nel rough, incorre nella penalità di due colpi",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "16_1b"
+      }
+    ],
+    "referenceText": "Controlla la regola 16.1b"
+  },
+  {
+    "id": 100,
+    "section": "Responsabilità del Comitato, altre forme di gioco",
+    "level": "Medio/Difficile",
+    "question": "Gianni dimentica di firmare lo score. Dopo che la gara è stata chiusa la segreteria si accorge di questa dimenticanza ed avvisa Gianni che effettivamente non si era accorto di nulla.",
+    "image": null,
+    "answers": [
+      {
+        "text": "Non c'è penalità",
+        "correct": true
+      },
+      {
+        "text": "Gianni deve essere squalificato",
+        "correct": false
+      },
+      {
+        "text": "Gianni deve essere penalizzato con l'aggiunta di due colpi di penalità",
+        "correct": false
+      }
+    ],
+    "correctIndex": 0,
+    "references": [
+      {
+        "type": "Regole",
+        "ref": "20_2e(2)"
+      }
+    ],
+    "referenceText": "Controlla la regola 20.2e(2)"
+  }
+]

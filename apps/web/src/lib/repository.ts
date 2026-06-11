@@ -71,6 +71,34 @@ export async function addBlock(input: BlockInput, db: GolfDb = defaultDb): Promi
   await db.shotBlocks.put({ id: uuid(), ...input, updatedAt: timestamp, deletedAt: null });
 }
 
+export async function addQuizResult(
+  input: { quizId: number; section: string; level: string; correct: boolean },
+  db: GolfDb = defaultDb
+): Promise<void> {
+  const timestamp = now();
+  await db.quizResults.put({
+    id: uuid(),
+    quizId: input.quizId,
+    section: input.section,
+    level: input.level,
+    correct: input.correct,
+    answeredAt: timestamp,
+    updatedAt: timestamp,
+    deletedAt: null,
+  });
+}
+
+// Soft-delete every result so the reset travels through sync like any other edit.
+export async function resetQuizResults(db: GolfDb = defaultDb): Promise<void> {
+  const timestamp = now();
+  await db.transaction('rw', db.quizResults, async () => {
+    const active = await db.quizResults.filter((r) => !r.deletedAt).toArray();
+    await db.quizResults.bulkPut(
+      active.map((r) => ({ ...r, deletedAt: timestamp, updatedAt: timestamp }))
+    );
+  });
+}
+
 export async function addSkillTestResult(
   input: { testKey: string; score: number },
   db: GolfDb = defaultDb
